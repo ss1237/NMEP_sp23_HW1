@@ -28,7 +28,7 @@ Feel free to ask your NMEP friends if you don't know!
 
 ## -1.0 What is the difference between `torch.nn.Module` and `torch.nn.functional`?
 
-`YOUR ANSWER HERE`
+torch.nn.Module allows you to define arbitrary network architectures, while torch.nn.functional provides a library of stateless functions such as loss functions.
 
 ## -1.1 What is the difference between a Dataset and a DataLoader?
 
