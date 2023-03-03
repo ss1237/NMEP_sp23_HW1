@@ -32,7 +32,7 @@ torch.nn.Module allows you to define arbitrary network architectures, while torc
 
 ## -1.1 What is the difference between a Dataset and a DataLoader?
 
-`YOUR ANSWER HERE`
+`Dataset stores the samples and respective labels while Dataloader wraps an iterable around the Dataset so that we can access the Dataset'
 
 ## -1.2 What does `@torch.no_grad()` above a function header do?
 
