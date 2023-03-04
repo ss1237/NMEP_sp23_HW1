@@ -32,11 +32,11 @@ torch.nn.Module allows you to define arbitrary network architectures, while torc
 
 ## -1.1 What is the difference between a Dataset and a DataLoader?
 
-`Dataset stores the samples and respective labels while Dataloader wraps an iterable around the Dataset so that we can access the Dataset'
+Dataset stores the samples and respective labels while Dataloader wraps an iterable around the Dataset so that we can access the Dataset.
 
 ## -1.2 What does `@torch.no_grad()` above a function header do?
 
-`YOUR ANSWER HERE`
+It makes sure that any operations done on the function doesn't store gradients.
 
 
 
@@ -44,27 +44,27 @@ torch.nn.Module allows you to define arbitrary network architectures, while torc
 
 Read through `README.md` and follow the steps to understand how the repo is structured.
 
-## 0.0 What are the `build.py` files? Why do we have them?**
+## 0.0 What are the `build.py` files? Why do we have them?
 
-`YOUR ANSWER HERE`
+It contains code used to build the model and dataloaders using the configs.
 
 ## 0.1 Where would you define a new model?
 
-`YOUR ANSWER HERE`
+You would define it inside the models folder.
 
 ## 0.2 How would you add support for a new dataset? What files would you need to change?
 
-`YOUR ANSWER HERE`
+To add a new dataset you would add code in `datasets.py`. After that you would need to also edit `build.py` to build the new dataset and use it.
 
 ## 0.3 Where is the actual training code?
 
-`YOUR ANSWER HERE`
+The training code is in `main.py`.
 
 ## 0.4 Create a diagram explaining the structure of `main.py` and the entire code repo.
 
 Be sure to include the 4 main functions in it (`train`, `train_one_epoch`, `validate`, `evaluate`) and how they interact with each other. Also explain where the other files are used. No need to dive too deep into any part of the code for now, the following parts will do deeper dives into each part of the code. For now, read the code just enough to understand how the pieces come together, not necessarily the specifics. You can use any tool to create the diagram (e.g. just explain it in nice markdown, draw it on paper and take a picture, use draw.io, excalidraw, etc.)
 
-`YOUR ANSWER HERE`
+
 
 
 
