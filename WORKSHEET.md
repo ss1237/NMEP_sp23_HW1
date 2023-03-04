@@ -67,9 +67,9 @@ Be sure to include the 4 main functions in it (`main`, `train_one_epoch`, `valid
 HELLO
 ```mermaid
   graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
+      main-->train_one_epoch;
+      main-->validate;
+      main-->evaluate;
       C-->D;
 ```
 
