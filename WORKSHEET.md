@@ -82,7 +82,7 @@ The entire repo is structured as follows:
       root-->data;
       root-->models;
       root-->utils;
-      root--> config.py;
+      root-->config.py;
       root-->main.py;
       root-->optimizer.py;
       configs-->.yaml_files;
@@ -96,6 +96,7 @@ The entire repo is structured as follows:
       utils-->logger.py;
 ```
 
+The `\configs` folder contains various `.yaml` files that contain configurations for models that we may create. Inside `\data` is where we have files to load and process datasets. Inside `\models` is where we create and store our models. The `\utils` folder contains various python files that help when training our models. `main.py`, `config.py`, and `optimizer.py` all contain code that is used when training, both for the training loop and useful definitions that we use such as configurations and optimizers. There are also various `build.py` files that are used to handle the configs when calling another file inside the same folder.
 
 
 
