@@ -64,14 +64,31 @@ The training code is in `main.py`.
 
 Be sure to include the 4 main functions in it (`main`, `train_one_epoch`, `validate`, `evaluate`) and how they interact with each other. Also explain where the other files are used. No need to dive too deep into any part of the code for now, the following parts will do deeper dives into each part of the code. For now, read the code just enough to understand how the pieces come together, not necessarily the specifics. You can use any tool to create the diagram (e.g. just explain it in nice markdown, draw it on paper and take a picture, use draw.io, excalidraw, etc.)
 
-HELLO
+The `main` function calls the  `train_one_epoch` and `validate` functions repeatedly every epoch to get accuracies for training (updating the model) and validation (testing the current model on new data). After training the model, it calls the `evaludate` function to obtain predictions and eventually store them.
 ```mermaid
   graph TD;
       main-->train_one_epoch;
       main-->validate;
       main-->evaluate;
-      C-->D;
 ```
+
+The entire repo is structured as follows:
+
+```mermaid
+  graph TD;
+      root-->configs;
+      root-->data;
+      root-->models;
+      configs-->lenet_configs, resnet_configs;
+      data-->build.py;
+      data-->datasets.py;
+      models-->build.py;
+      models-->resnet.py;
+      models-->lenet.py;
+      
+```
+
+
 
 
 # Part 1: Datasets
