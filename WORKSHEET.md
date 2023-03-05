@@ -79,13 +79,13 @@ The entire repo is structured as follows:
       root-->configs;
       root-->data;
       root-->models;
-      configs-->lenet_configs, resnet_configs;
+      configs-->.yaml_files;
       data-->build.py;
       data-->datasets.py;
       models-->build.py;
       models-->resnet.py;
       models-->lenet.py;
-      
+
 ```
 
 
