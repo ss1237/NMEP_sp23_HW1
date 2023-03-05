@@ -108,37 +108,37 @@ The following questions relate to `data/build.py` and `data/datasets.py`.
 
 ### 1.0.0 What does `build_loader` do?
 
-`YOUR ANSWER HERE`
+`build_loader` creates Dataset objects from the datasets we want and then passes them into DataLoader objects for us to use.
 
 ### 1.0.1 What functions do you need to implement for a PyTorch Datset? (hint there are 3)
 
-`YOUR ANSWER HERE`
+For a PyTorch Dataset, we need to implement the functions `__getitem__`, `__len__`, and `_get_transforms`.
 
 ## 1.1 CIFAR10Dataset
 
 ### 1.1.0 Go through the constructor. What field actually contains the data? Do we need to download it ahead of time?
 
-`YOUR ANSWER HERE`
+The data is read into `self.file` using the h5py library. It uses the `filepath` field as its filepath, which means that we have to download the dataset ahead of time.
 
 ### 1.1.1 What is `self.train`? What is `self.transform`?
 
-`YOUR ANSWER HERE`
+`self.train` is a boolean variables that tell the object whether the dataset is meant for training. `self.transform` is the transform that this dataset is going to do on the data, which is dependent on the value of `self.train`.
 
 ### 1.1.2 What does `__getitem__` do? What is `index`?
 
-`YOUR ANSWER HERE`
+`__getitem__` gets an image and label from the dataset and returns it. `index` tells the function which item to return from the dataset.
 
 ### 1.1.3 What does `__len__` do?
 
-`YOUR ANSWER HERE`
+`__len__` returns the length of the dataset.
 
 ### 1.1.4 What does `self._get_transforms` do? Why is there an if statement?
 
-`YOUR ANSWER HERE`
+`self._get_transform` returns the transformation that needs to be used for the current dataset. If the dataset is meant for training, the if statement makes sure the transform augments the data with a rotation/color transform. If not, it simply normalizes the image.
 
 ### 1.1.5 What does `transforms.Normalize` do? What do the parameters mean? (hint: take a look here: https://pytorch.org/vision/main/generated/torchvision.transforms.Normalize.html)
 
-`YOUR ANSWER HERE`
+`transforms.Normalize` normalizes the value of a tensor. Its first tuple contains the target means for each of the channels and the second tuple contains the target standard deviations.
 
 ## 1.2 MediumImagenetHDF5Dataset
 
