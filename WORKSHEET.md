@@ -64,13 +64,15 @@ The training code is in `main.py`.
 
 Be sure to include the 4 main functions in it (`main`, `train_one_epoch`, `validate`, `evaluate`) and how they interact with each other. Also explain where the other files are used. No need to dive too deep into any part of the code for now, the following parts will do deeper dives into each part of the code. For now, read the code just enough to understand how the pieces come together, not necessarily the specifics. You can use any tool to create the diagram (e.g. just explain it in nice markdown, draw it on paper and take a picture, use draw.io, excalidraw, etc.)
 
-The `main` function calls the  `train_one_epoch` and `validate` functions repeatedly every epoch to get accuracies for training (updating the model) and validation (testing the current model on new data). After training the model, it calls the `evaludate` function to obtain predictions and eventually store them.
+
 ```mermaid
   graph TD;
       main-->train_one_epoch;
       main-->validate;
       main-->evaluate;
 ```
+
+The `main` function calls the  `train_one_epoch` and `validate` functions repeatedly every epoch to get accuracies for training (updating the model) and validation (testing the current model on new data). After training the model, it calls the `evaludate` function to obtain predictions and eventually store them.
 
 The entire repo is structured as follows:
 
@@ -80,6 +82,9 @@ The entire repo is structured as follows:
       root-->data;
       root-->models;
       root-->utils;
+      root--> config.py;
+      root-->main.py;
+      root-->optimizer.py;
       configs-->.yaml_files;
       data-->data_build.py;
       data-->datasets.py;
@@ -89,7 +94,6 @@ The entire repo is structured as follows:
       utils-->__init__.py;
       utils-->load_save.py;
       utils-->logger.py;
-      
 ```
 
 
