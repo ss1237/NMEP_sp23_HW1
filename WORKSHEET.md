@@ -64,14 +64,40 @@ The training code is in `main.py`.
 
 Be sure to include the 4 main functions in it (`main`, `train_one_epoch`, `validate`, `evaluate`) and how they interact with each other. Also explain where the other files are used. No need to dive too deep into any part of the code for now, the following parts will do deeper dives into each part of the code. For now, read the code just enough to understand how the pieces come together, not necessarily the specifics. You can use any tool to create the diagram (e.g. just explain it in nice markdown, draw it on paper and take a picture, use draw.io, excalidraw, etc.)
 
-HELLO
+
 ```mermaid
   graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+      main-->train_one_epoch;
+      main-->validate;
+      main-->evaluate;
 ```
+
+The `main` function calls the  `train_one_epoch` and `validate` functions repeatedly every epoch to get accuracies for training (updating the model) and validation (testing the current model on new data). After training the model, it calls the `evaludate` function to obtain predictions and eventually store them.
+
+The entire repo is structured as follows:
+
+```mermaid
+  graph TD;
+      root-->configs;
+      root-->data;
+      root-->models;
+      root-->utils;
+      root-->config.py;
+      root-->main.py;
+      root-->optimizer.py;
+      configs-->.yaml_files;
+      data-->data_build.py;
+      data-->datasets.py;
+      models-->models_build.py;
+      models-->resnet.py;
+      models-->lenet.py;
+      utils-->__init__.py;
+      utils-->load_save.py;
+      utils-->logger.py;
+```
+
+The `\configs` folder contains various `.yaml` files that contain configurations for models that we may create. Inside `\data` is where we have files to load and process datasets. Inside `\models` is where we create and store our models. The `\utils` folder contains various python files that help when training our models. `main.py`, `config.py`, and `optimizer.py` all contain code that is used when training, both for the training loop and useful definitions that we use such as configurations and optimizers. There are also various `build.py` files that are used to handle the configs when calling another file inside the same folder.
+
 
 
 # Part 1: Datasets
@@ -82,37 +108,37 @@ The following questions relate to `data/build.py` and `data/datasets.py`.
 
 ### 1.0.0 What does `build_loader` do?
 
-`YOUR ANSWER HERE`
+`build_loader` creates Dataset objects from the datasets we want and then passes them into DataLoader objects for us to use.
 
 ### 1.0.1 What functions do you need to implement for a PyTorch Datset? (hint there are 3)
 
-`YOUR ANSWER HERE`
+For a PyTorch Dataset, we need to implement the functions `__getitem__`, `__len__`, and `_get_transforms`.
 
 ## 1.1 CIFAR10Dataset
 
 ### 1.1.0 Go through the constructor. What field actually contains the data? Do we need to download it ahead of time?
 
-`YOUR ANSWER HERE`
+The data is read into `self.file` using the h5py library. It uses the `filepath` field as its filepath, which means that we have to download the dataset ahead of time.
 
 ### 1.1.1 What is `self.train`? What is `self.transform`?
 
-`YOUR ANSWER HERE`
+`self.train` is a boolean variables that tell the object whether the dataset is meant for training. `self.transform` is the transform that this dataset is going to do on the data, which is dependent on the value of `self.train`.
 
 ### 1.1.2 What does `__getitem__` do? What is `index`?
 
-`YOUR ANSWER HERE`
+`__getitem__` gets an image and label from the dataset and returns it. `index` tells the function which item to return from the dataset.
 
 ### 1.1.3 What does `__len__` do?
 
-`YOUR ANSWER HERE`
+`__len__` returns the length of the dataset.
 
 ### 1.1.4 What does `self._get_transforms` do? Why is there an if statement?
 
-`YOUR ANSWER HERE`
+`self._get_transform` returns the transformation that needs to be used for the current dataset. If the dataset is meant for training, the if statement makes sure the transform augments the data with a rotation/color transform. If not, it simply normalizes the image.
 
 ### 1.1.5 What does `transforms.Normalize` do? What do the parameters mean? (hint: take a look here: https://pytorch.org/vision/main/generated/torchvision.transforms.Normalize.html)
 
-`YOUR ANSWER HERE`
+`transforms.Normalize` normalizes the value of a tensor. Its first tuple contains the target means for each of the channels and the second tuple contains the target standard deviations.
 
 ## 1.2 MediumImagenetHDF5Dataset
 
