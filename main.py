@@ -21,7 +21,7 @@ from optimizer import build_optimizer
 from utils import create_logger, load_checkpoint, save_checkpoint
 
 import matplotlib as plt
-from data.datasets import CIFAR10Dataset
+from data.datasets import MediumImagenetHDF5Dataset
 import random
 from torchvision.utils import save_image
 import matplotlib.pyplot as mpimg
@@ -244,23 +244,24 @@ if __name__ == "__main__":
     logger.info(config.dump())
     logger.info(json.dumps(vars(args)))
 
-    if vars(args)["vis_dataset"] != 0:
+    if vars(args)["vis"]:
         dataset_train, dataset_val, dataset_test, data_loader_train, data_loader_val, data_loader_test = build_loader(
             config
         )
         
-        for i in range(vars(args)["vis_dataset"]):
-            im = CIFAR10Dataset.__getitem__(dataset_train, random.randint(0, CIFAR10Dataset.__len__(dataset_train)))
+        for i in range(vars(args)["vis"]):
+            im = MediumImagenetHDF5Dataset.__getitem__(dataset_train, random.randint(0, MediumImagenetHDF5Dataset.__len__(dataset_train)))
             label = im[1]
             image = im[0]
             image.reshape(3,32,32).permute(1, 2, 0)
-            image_path = str(label) + "no" + str(i) + "image.png"
+            image_path = "output/resnet18/image" + str(i) + "_" + str(label.item()) + ".png"
             # save image
             tensor  = image.cpu()
             save_image(tensor, image_path)
             # show image
             image = mpimg.imread(image_path)
-            plt.title = image_path
-            plt.imshow(image)
-            plt.show()
-    main(config)
+            mpimg.title = image_path
+            mpimg.imshow(image)
+            mpimg.show()
+    else:
+        main(config)

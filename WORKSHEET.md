@@ -8,7 +8,7 @@ This is the worksheet for Homework 1. Your deliverables for this homework are:
 - [ ] Kaggle submission and writeup (details below)
 - [ ] Github repo with all of your code! You need to either fork it or just copy the code over to your repo. A simple way of doing this is provided below. Include the link to your repo below. If you would like to make the repo private, please dm us and we'll send you the GitHub usernames to add as collaborators.
 
-`YOUR GITHUB REPO HERE (or notice that you DMed us to share a private repo)`
+`https://github.com/ss1237/NMEP_sp23_HW1`
 
 ## To move to your own repo:
 
@@ -162,7 +162,7 @@ Visualize ~10 or so examples from the dataset. There's many ways to do it - you 
 
 Be sure to also get the class names. You might notice that we don't have them loaded anywhere in the repo - feel free to fix it or just hack it together for now, the class names are in a file in the same folder as the hdf5 dataset.
 
-By running `main.py` with the flag `--vis`, we can specify a certain number of images to save.
+By running the command `python main.py --cfg=configs/resnet18_medium_imagenet.yaml --vis=10`, we can sample 10 random images and store their files in `/output/resnet18`.
 
 # Part 2: Models
 
@@ -170,15 +170,15 @@ The following questions relate to `models/build.py` and `models/models.py`.
 
 ## What models are implemented for you?
 
-`YOUR ANSWER HERE`
+LeNet is implemented for us, and only part of ResNet is implemeneted.
 
 ## What do PyTorch models inherit from? What functions do we need to implement for a PyTorch Model? (hint there are 2)
 
-`YOUR ANSWER HERE`
+PyTorch models inherit from `nn.Module` and we must always implement the `__init__()` and `forward()` functions.
 
 ## How many layers does our implementation of LeNet have? How many parameters does it have? (hint: to count the number of parameters, you might want to run the code)
 
-`YOUR ANSWER HERE`
+Our implementation of LeNet has 7 layers and a total of 99.28K parameters.
 
 
 
@@ -188,16 +188,21 @@ The following questions relate to `main.py`, and the configs in `configs/`.
 
 ## 3.0 What configs have we provided for you? What models and datasets do they train on?
 
-`YOUR ANSWER HERE`
+The provided configs are for LeNet (which trains on CIFAR10) and ResNet (which trains on CIFAR10 and MediumImageNet).
 
 ## 3.1 Open `main.py` and go through `main()`. In bullet points, explain what the function does.
 
-`YOUR ANSWER HERE`
+- Creates the datasets and model according to config
+- Puts the model on the correct device
+- Records and prints summary values
+- Initializes the optimizer, loss, and learning rate scheduler
+- Begins the training loop, which cycles between training and validation while periodically saving the model and printing out current information about the model
+- Prints the total time and then runs the model on the test data
 
 ## 3.2 Go through `validate()` and `evaluate()`. What do they do? How are they different? 
 > Could we have done better by reusing code? Yes. Yes we could have but we didn't... sorry...
 
-`YOUR ANSWER HERE`
+The `validate()` function calculates the accuracy on the validation data set while the `evaluate()` function returns prediction values for the testing data set. They are different because of the data sets that they are evaluated on and the types of values they return.
 
 
 # Part 4: AlexNet
