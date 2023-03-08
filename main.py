@@ -20,6 +20,12 @@ from models import build_model
 from optimizer import build_optimizer
 from utils import create_logger, load_checkpoint, save_checkpoint
 
+import matplotlib as plt
+from data.datasets import CIFAR10Dataset
+import random
+from torchvision.utils import save_image
+import matplotlib.pyplot as mpimg
+
 
 def parse_option():
     parser = argparse.ArgumentParser("Vision model training and evaluation script", add_help=False)
@@ -39,6 +45,8 @@ def parse_option():
     )
     parser.add_argument("--eval", action="store_true", help="Perform evaluation only")
     parser.add_argument("--throughput", action="store_true", help="Test throughput only")
+    parser.add_argument("--vis", type=int, help="number of images to visualize")
+
 
     args = parser.parse_args()
 
@@ -236,4 +244,23 @@ if __name__ == "__main__":
     logger.info(config.dump())
     logger.info(json.dumps(vars(args)))
 
+    if vars(args)["vis_dataset"] != 0:
+        dataset_train, dataset_val, dataset_test, data_loader_train, data_loader_val, data_loader_test = build_loader(
+            config
+        )
+        
+        for i in range(vars(args)["vis_dataset"]):
+            im = CIFAR10Dataset.__getitem__(dataset_train, random.randint(0, CIFAR10Dataset.__len__(dataset_train)))
+            label = im[1]
+            image = im[0]
+            image.reshape(3,32,32).permute(1, 2, 0)
+            image_path = str(label) + "no" + str(i) + "image.png"
+            # save image
+            tensor  = image.cpu()
+            save_image(tensor, image_path)
+            # show image
+            image = mpimg.imread(image_path)
+            plt.title = image_path
+            plt.imshow(image)
+            plt.show()
     main(config)
