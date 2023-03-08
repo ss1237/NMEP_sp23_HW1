@@ -144,17 +144,17 @@ The data is read into `self.file` using the h5py library. It uses the `filepath`
 
 ### 1.2.0 Go through the constructor. What field actually contains the data? Where is the data actually stored on honeydew? What other files are stored in that folder on honeydew? How large are they?
 
-The `self.file` field provides the data as we want to read it. The data is stored in the filepath `/data/medium-imagenet/medium-imagenet-nmep-96.hdf5`, 
+The `self.file` field provides the data as we want to read it. The data is stored in the filepath `/data/medium-imagenet/medium-imagenet-nmep-96.hdf5`, and the other files are `medium-imagenet-nmep-96.hdf5` (50GB), `medium-imagenet-nmep-224.hdf5.old` (268GB), and some other smaller python files used for setup.
 
 > *Some background*: HDF5 is a file format that stores data in a hierarchical structure. It is similar to a python dictionary. The files are binary and are generally really efficient to use. Additionally, `h5py.File()` does not actually read the entire file contents into memory. Instead, it only reads the data when you access it (as in `__getitem__`). You can learn more about [hdf5 here](https://portal.hdfgroup.org/display/HDF5/HDF5) and [h5py here](https://www.h5py.org/).
 
 ### 1.2.1 How is `_get_transforms` different from the one in CIFAR10Dataset?
 
-`YOUR ANSWER HERE`
+This one divides every value by 256 since CIFAR10 is in black and white while MediumImageNet has RBG values which are much larger.
 
 ### 1.2.2 How is `__getitem__` different from the one in CIFAR10Dataset? How many data splits do we have now? Is it different from CIFAR10? Do we have labels/annotations for the test set?
 
-`YOUR ANSWER HERE`
+This function checks whether the data is in train or test. If it is for the train set, it appends the label but for the test set it simply appends -1 as the label, which is different for CIFAR10.
 
 ### 1.2.3 Visualizing the dataset
 
@@ -162,8 +162,7 @@ Visualize ~10 or so examples from the dataset. There's many ways to do it - you 
 
 Be sure to also get the class names. You might notice that we don't have them loaded anywhere in the repo - feel free to fix it or just hack it together for now, the class names are in a file in the same folder as the hdf5 dataset.
 
-`YOUR ANSWER HERE`
-
+By running `main.py` with the flag `--vis`, we can specify a certain number of images to save.
 
 # Part 2: Models
 
