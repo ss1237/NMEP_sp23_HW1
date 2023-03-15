@@ -116,6 +116,8 @@ class CIFAR10Dataset(Dataset):
         if self.train:
             transform = [
                 transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4),
+                #transforms.GaussianBlur(kernel_size=3),
+                transforms.RandomAutocontrast(0.3),
                 transforms.RandomHorizontalFlip(),
                 transforms.ToTensor(),
                 transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),

@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 253, in <module>
+    main(config)
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 55, in main
+    dataset_train, dataset_val, dataset_test, data_loader_train, data_loader_val, data_loader_test = build_loader(
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/data/build.py", line 8, in build_loader
+    dataset_train = CIFAR10Dataset(img_size=config.DATA.IMG_SIZE, train=True)
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/data/datasets.py", line 104, in __init__
+    self.transform = self._get_transforms()
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/data/datasets.py", line 119, in _get_transforms
+    transforms.GaussianBlur(kernel_size=4),
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 1787, in __init__
+    raise ValueError("Kernel size value should be an odd and positive number.")
+ValueError: Kernel size value should be an odd and positive number.
+=> merge config from configs/alexnet_base.yaml
+[32m[2023-03-15 03:34:04 alexnet][33m(main.py 244)[39m: INFO Full config saved to output/alexnet/config.yaml
+[32m[2023-03-15 03:34:04 alexnet][33m(main.py 250)[39m: INFO AUG:
+  COLOR_JITTER: 0.4
+  RAND_AUGMENT: rand-m9-mstd0.5-inc1
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 256
+  DATASET: cifar10
+  DATA_PATH: ''
+  IMG_SIZE: 70
+  INTERPOLATION: bicubic
+  NUM_WORKERS: 32
+  PIN_MEMORY: true
+EVAL_MODE: false
+MODEL:
+  DROP_RATE: 0.0
+  NAME: alexnet
+  NUM_CLASSES: 200
+  RESNET: {}
+  RESUME: ''
+OUTPUT: output/alexnet
+PRINT_FREQ: 99999
+SAVE_FREQ: 5
+SEED: 0
+TEST:
+  CROP: true
+  SEQUENTIAL: false
+  SHUFFLE: false
+TRAIN:
+  ACCUMULATION_STEPS: 1
+  EPOCHS: 50
+  LR: 0.0003
+  LR_SCHEDULER:
+    NAME: cosine
+  MIN_LR: 3.0e-05
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  WARMUP_EPOCHS: 10
+  WARMUP_LR: 3.0e-05
+[32m[2023-03-15 03:34:04 alexnet][33m(main.py 251)[39m: INFO {"cfg": "configs/alexnet_base.yaml", "opts": null, "batch_size": null, "data_path": null, "resume": null, "output": "output", "eval": false, "throughput": false}

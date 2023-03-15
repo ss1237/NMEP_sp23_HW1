@@ -1,3 +1,5 @@
+# CUDA_VISIBLE_DEVICES=1 python main.py --cfg=configs/alexnet_base.yaml
+
 import argparse
 import datetime
 import json
@@ -98,6 +100,8 @@ def main(config):
         logger.info(f" * Val Acc {val_acc1:.3f} Val Loss {val_loss:.3f}")
         logger.info(f"Accuracy of the network on the {len(dataset_val)} val images: {val_acc1:.1f}%")
 
+        wandb.log({'train accuracy': train_acc1, 'train loss': train_loss, 'val accuracy': val_acc1, 'val loss': val_loss})
+
         if epoch % config.SAVE_FREQ == 0 or epoch == (config.TRAIN.EPOCHS - 1):
             save_checkpoint(config, epoch, model, max_accuracy, optimizer, lr_scheduler, logger)
 
@@ -163,8 +167,7 @@ def train_one_epoch(config, model, criterion, data_loader, optimizer, epoch):
     epoch_time = time.time() - start
     logger.info(f"EPOCH {epoch} training takes {datetime.timedelta(seconds=int(epoch_time))}")
     
-    #wandb.log({'accuracy': acc1_meter.avg, 'loss': loss_meter.avg})
-    wandb.log({'throughput': config.DATA.BATCH_SIZE/epoch_time})
+    #wandb.log({'throughput': config.DATA.BATCH_SIZE/epoch_time})
 
     return acc1_meter.avg, loss_meter.avg
 
@@ -205,6 +208,7 @@ def validate(config, data_loader, model):
         f"Acc@1 {acc1_meter.val:.3f} ({acc1_meter.avg:.3f})\t"
         f"Mem {memory_used:.0f}MB"
     )
+
     return acc1_meter.avg, loss_meter.avg
 
 

@@ -1,0 +1,130 @@
+=> merge config from configs/alexnet_base.yaml
+[32m[2023-03-15 04:34:09 alexnet][33m(main.py 243)[39m: INFO Full config saved to output/alexnet/config.yaml
+[32m[2023-03-15 04:34:09 alexnet][33m(main.py 249)[39m: INFO AUG:
+  COLOR_JITTER: 0.4
+  RAND_AUGMENT: rand-m9-mstd0.5-inc1
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 256
+  DATASET: cifar10
+  DATA_PATH: ''
+  IMG_SIZE: 70
+  INTERPOLATION: bicubic
+  NUM_WORKERS: 32
+  PIN_MEMORY: true
+EVAL_MODE: false
+MODEL:
+  DROP_RATE: 0.0
+  NAME: alexnet
+  NUM_CLASSES: 200
+  RESNET: {}
+  RESUME: ''
+OUTPUT: output/alexnet
+PRINT_FREQ: 99999
+SAVE_FREQ: 5
+SEED: 0
+TEST:
+  CROP: true
+  SEQUENTIAL: false
+  SHUFFLE: false
+TRAIN:
+  ACCUMULATION_STEPS: 1
+  EPOCHS: 50
+  LR: 0.0003
+  LR_SCHEDULER:
+    NAME: cosine
+  MIN_LR: 3.0e-05
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  WARMUP_EPOCHS: 10
+  WARMUP_LR: 3.0e-05
+[32m[2023-03-15 04:34:09 alexnet][33m(main.py 250)[39m: INFO {"cfg": "configs/alexnet_base.yaml", "opts": null, "batch_size": null, "data_path": null, "resume": null, "output": "output", "eval": false, "throughput": false}
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+[32m[2023-03-15 04:34:14 alexnet][33m(main.py 73)[39m: INFO AlexNet(
+  #params: 57.82M, #flops: 95.59M
+  (features): Sequential(
+    #params: 2.47M, #flops: 40.24M
+    (0): Conv2d(
+      3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2)
+      #params: 23.3K, #flops: 5.95M
+    )
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(
+      64, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2)
+      #params: 0.31M, #flops: 15.05M
+    )
+    (4): ReLU()
+    (5): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(
+      192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+      #params: 0.66M, #flops: 5.97M
+    )
+    (7): ReLU()
+    (8): Conv2d(
+      384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+      #params: 0.88M, #flops: 7.96M
+    )
+    (9): ReLU()
+    (10): Conv2d(
+      256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+      #params: 0.59M, #flops: 5.31M
+    )
+    (11): ReLU()
+    (12): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (13): AdaptiveAvgPool2d(
+      output_size=(6, 6)
+      #params: 0, #flops: 0.26K
+    )
+  )
+  (classifier): Sequential(
+    #params: 55.35M, #flops: 55.35M
+    (0): Dropout(p=0.5, inplace=False)
+    (1): Linear(
+      in_features=9216, out_features=4096, bias=True
+      #params: 37.75M, #flops: 37.75M
+    )
+    (2): ReLU()
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(
+      in_features=4096, out_features=4096, bias=True
+      #params: 16.78M, #flops: 16.78M
+    )
+    (5): ReLU()
+    (6): Linear(
+      in_features=4096, out_features=200, bias=True
+      #params: 0.82M, #flops: 0.82M
+    )
+  )
+)
+[32m[2023-03-15 04:34:14 alexnet][33m(main.py 74)[39m: INFO number of params: 57.82324 M
+[32m[2023-03-15 04:34:14 alexnet][33m(main.py 75)[39m: INFO flops: 95.588608 MFLOPS
+[32m[2023-03-15 04:34:14 alexnet][33m(main.py 91)[39m: INFO Start training
+Unsupported operator aten::max_pool2d encountered 3 time(s)
+
+
+
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▎     | 186/196 [00:07<00:00, 38.49it/s]
+[32m[2023-03-15 04:34:22 alexnet][33m(main.py 159)[39m: INFO Train: [0/50]	lr 0.000300	time 0.0199 (0.0395)	loss 1.6548 (2.2351)	Acc@1 37.500 (16.732)	Mem 1188MB
+[32m[2023-03-15 04:34:22 alexnet][33m(main.py 168)[39m: INFO EPOCH 0 training takes 0:00:07
+[32m[2023-03-15 04:34:22 alexnet][33m(main.py 95)[39m: INFO  * Train Acc 16.732 Train Loss 2.235
+
+[32m[2023-03-15 04:34:22 alexnet][33m(main.py 96)[39m: INFO Accuracy of the network on the 50000 train images: 16.7%
+[32m[2023-03-15 04:34:24 alexnet][33m(main.py 204)[39m: INFO Validate: 	Time 0.004 (0.044)	Loss 1.5257 (1.7320)	Acc@1 50.000 (33.460)	Mem 1188MB
+[32m[2023-03-15 04:34:24 alexnet][33m(main.py 100)[39m: INFO  * Val Acc 33.460 Val Loss 1.732
+[32m[2023-03-15 04:34:24 alexnet][33m(main.py 101)[39m: INFO Accuracy of the network on the 10000 val images: 33.5%
+Traceback (most recent call last):
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 252, in <module>
+    main(config)
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 103, in main
+    wandb.log({'train accuracy': acc1_meter.avg, 'train loss': loss_meter.avg, 'val accuracy': acc1_meter.avg, 'val loss': loss_meter.avg})
+NameError: name 'acc1_meter' is not defined

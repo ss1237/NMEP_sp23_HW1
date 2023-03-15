@@ -285,12 +285,14 @@ We see that as we double the batch size the throughput approximately doubles, wh
 
 ## 5.5 Try different data augmentations. Take a look [here](https://pytorch.org/vision/stable/transforms.html) for torchvision augmentations. Try at least 2 new augmentation schemes. Record loss/accuracy curves and best accuracies on validation/train set.
 
-`YOUR ANSWER HERE`
+![](images/nmep_hw1_5.5a.png)
+![](images/nmep_hw1_5.5b.png)
+
+We tried adding two different augmentations: gaussian blur with a 3x3 kernel and random autocontrast with probability 0.3. Adding the blur made the network worse but the autocontrast resulted in a significant improvement in validation accuracy/loss.
 
 ## 5.6 (optional) Play around with more hyperparameters. I recommend playing around with the optimizer (Adam, SGD, RMSProp, etc), learning rate scheduler (constant, StepLR, ReduceLROnPlateau, etc), weight decay, dropout, activation functions (ReLU, Leaky ReLU, GELU, Swish, etc), etc.
 
-`YOUR ANSWER HERE`
-
+Brain go brr no time gotta catch up to Tyler :)
 
 
 # Part 6: ResNet
