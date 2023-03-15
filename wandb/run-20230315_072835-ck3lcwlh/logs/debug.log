@@ -1,0 +1,31 @@
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_setup.py:_flush():76] Configure stats pid to 2938457
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_setup.py:_flush():76] Loading settings from /home/sselvan/.config/wandb/settings
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_setup.py:_flush():76] Loading settings from /home/sselvan/NMEP/sp23-nmep-hw1/wandb/settings
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/sselvan/NMEP/sp23-nmep-hw1/main.py'}
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_init.py:_log_setup():506] Logging user logs to /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_072835-ck3lcwlh/logs/debug.log
+2023-03-15 07:28:35,240 INFO    MainThread:2938457 [wandb_init.py:_log_setup():507] Logging internal logs to /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_072835-ck3lcwlh/logs/debug-internal.log
+2023-03-15 07:28:35,241 INFO    MainThread:2938457 [wandb_init.py:init():546] calling init triggers
+2023-03-15 07:28:35,241 INFO    MainThread:2938457 [wandb_init.py:init():552] wandb.init called with sweep_config: {}
+config: {}
+2023-03-15 07:28:35,241 INFO    MainThread:2938457 [wandb_init.py:init():602] starting backend
+2023-03-15 07:28:35,241 INFO    MainThread:2938457 [wandb_init.py:init():606] setting up manager
+2023-03-15 07:28:35,245 INFO    MainThread:2938457 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-03-15 07:28:35,246 INFO    MainThread:2938457 [wandb_init.py:init():613] backend started and connected
+2023-03-15 07:28:35,248 INFO    MainThread:2938457 [wandb_init.py:init():701] updated telemetry
+2023-03-15 07:28:35,253 INFO    MainThread:2938457 [wandb_init.py:init():741] communicating run to backend with 60.0 second timeout
+2023-03-15 07:28:35,512 INFO    MainThread:2938457 [wandb_run.py:_on_init():2131] communicating current version
+2023-03-15 07:28:35,602 INFO    MainThread:2938457 [wandb_run.py:_on_init():2140] got version response upgrade_message: "wandb version 0.14.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-03-15 07:28:35,602 INFO    MainThread:2938457 [wandb_init.py:init():789] starting run threads in backend
+2023-03-15 07:28:37,029 INFO    MainThread:2938457 [wandb_run.py:_console_start():2112] atexit reg
+2023-03-15 07:28:37,030 INFO    MainThread:2938457 [wandb_run.py:_redirect():1967] redirect: SettingsConsole.WRAP_RAW
+2023-03-15 07:28:37,030 INFO    MainThread:2938457 [wandb_run.py:_redirect():2032] Wrapping output streams.
+2023-03-15 07:28:37,030 INFO    MainThread:2938457 [wandb_run.py:_redirect():2057] Redirects installed.
+2023-03-15 07:28:37,031 INFO    MainThread:2938457 [wandb_init.py:init():831] run started, returning control to user process
+2023-03-15 07:28:37,046 INFO    MainThread:2938457 [wandb_config.py:__setitem__():152] config set learning rate = 0.0003 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7fd6694436a0>>
+2023-03-15 07:28:37,046 INFO    MainThread:2938457 [wandb_run.py:_config_callback():1249] config_cb learning rate 0.0003 None
+2023-03-15 07:28:37,047 INFO    MainThread:2938457 [wandb_config.py:__setitem__():152] config set batch size = 1024 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7fd6694436a0>>
+2023-03-15 07:28:37,047 INFO    MainThread:2938457 [wandb_run.py:_config_callback():1249] config_cb batch size 1024 None
+2023-03-15 07:28:46,705 WARNING MsgRouterThr:2938457 [router.py:message_loop():77] message_loop has been closed

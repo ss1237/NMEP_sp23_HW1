@@ -1,0 +1,89 @@
+=> merge config from configs/resnet18_base.yaml
+[32m[2023-03-15 07:27:21 resnet18][33m(main.py 243)[39m: INFO Full config saved to output/resnet18/config.yaml
+[32m[2023-03-15 07:27:21 resnet18][33m(main.py 249)[39m: INFO AUG:
+  COLOR_JITTER: 0.4
+  RAND_AUGMENT: rand-m9-mstd0.5-inc1
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 1024
+  DATASET: cifar10
+  DATA_PATH: ''
+  IMG_SIZE: 32
+  INTERPOLATION: bicubic
+  NUM_WORKERS: 8
+  PIN_MEMORY: true
+EVAL_MODE: false
+MODEL:
+  DROP_RATE: 0.0
+  NAME: resnet18
+  NUM_CLASSES: 10
+  RESNET: {}
+  RESUME: ''
+OUTPUT: output/resnet18
+PRINT_FREQ: 500
+SAVE_FREQ: 50
+SEED: 0
+TEST:
+  CROP: true
+  SEQUENTIAL: false
+  SHUFFLE: false
+TRAIN:
+  ACCUMULATION_STEPS: 1
+  EPOCHS: 100
+  LR: 0.0003
+  LR_SCHEDULER:
+    NAME: cosine
+  MIN_LR: 3.0e-05
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  WARMUP_EPOCHS: 20
+  WARMUP_LR: 3.0e-05
+[32m[2023-03-15 07:27:21 resnet18][33m(main.py 250)[39m: INFO {"cfg": "configs/resnet18_base.yaml", "opts": null, "batch_size": null, "data_path": null, "resume": null, "output": "output", "eval": false, "throughput": false}
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 252, in <module>
+    main(config)
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 72, in main
+    n_flops = flops.total()
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/fvcore/nn/jit_analysis.py", line 248, in total
+    stats = self._analyze()
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/fvcore/nn/jit_analysis.py", line 551, in _analyze
+    graph = _get_scoped_trace_graph(self._model, self._inputs, self._aliases)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/fvcore/nn/jit_analysis.py", line 176, in _get_scoped_trace_graph
+    graph, _ = _get_trace_graph(module, inputs)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/jit/_trace.py", line 1175, in _get_trace_graph
+    outs = ONNXTracedModule(f, strict, _force_outplace, return_inputs, _return_inputs_states)(*args, **kwargs)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/jit/_trace.py", line 127, in forward
+    graph, out = torch._C._create_graph_by_tracing(
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/jit/_trace.py", line 118, in wrapper
+    outs.append(self.inner(*trace_inputs))
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/models/resnet.py", line 111, in forward
+    x = self.layer1(x)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/home/sselvan/miniconda3/envs/vision-zoo/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/models/resnet.py", line 73, in forward
+    out += self.shortcut(x)
+RuntimeError: The size of tensor a (28) must match the size of tensor b (32) at non-singleton dimension 3

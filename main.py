@@ -23,7 +23,7 @@ from optimizer import build_optimizer
 from utils import create_logger, load_checkpoint, save_checkpoint
 
 import wandb
-wandb.init(project="SP23-NMEP-HW1-CIFAR10")
+wandb.init(project="SP23-NMEP-HW1-MediumImageNet")
 
 def parse_option():
     parser = argparse.ArgumentParser("Vision model training and evaluation script", add_help=False)
