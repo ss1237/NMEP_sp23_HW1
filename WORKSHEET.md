@@ -162,7 +162,7 @@ Visualize ~10 or so examples from the dataset. There's many ways to do it - you 
 
 Be sure to also get the class names. You might notice that we don't have them loaded anywhere in the repo - feel free to fix it or just hack it together for now, the class names are in a file in the same folder as the hdf5 dataset.
 
-By running the command `python main.py --cfg=configs/resnet18_medium_imagenet.yaml --vis=10`, we can sample 10 random images and store their files in `/output/resnet18`.
+By running the command `python visualize.py --cfg=configs/resnet18_medium_imagenet.yaml --vis=10`, we can sample 10 random images and store their files in `/output/resnet18`.
 
 # Part 2: Models
 
@@ -233,7 +233,7 @@ Linear with num_classes output units
 ## 4.1 How many parameters does AlexNet have? How does it compare to LeNet? With the same batch size, how much memory do LeNet and AlexNet take up while training? 
 > (hint: use `gpuststat`)
 
-`YOUR ANSWER HERE`
+AlexNet has 57.82M parameters compared to LeNet's 99.28K. With the same batch size, LeNet takes 23MB of memory while training compared to AlexNet's 1188MB.
 
 ## 4.2 Train AlexNet on CIFAR10. What accuracy do you get?
 
@@ -242,7 +242,7 @@ Report training and validation accuracy on AlexNet and LeNet. Report hyperparame
 > You can just copy the config file, don't need to write it all out again.
 > Also no need to tune the models much, you'll do it in the next part.
 
-`YOUR ANSWER HERE`
+Training AlexNet on CIFAR10, we get a max accuracy of 76.85%.
 
 
 
@@ -256,24 +256,32 @@ Report training and validation accuracy on AlexNet and LeNet. Report hyperparame
 
 ## 5.0 Setup plotting for training and validation accuracy and loss curves. Plot a point every epoch.
 
-`PUSH YOUR CODE TO YOUR OWN GITHUB :)`
+The code to use the wandb package is in the `main.py` file.
 
 ## 5.1 Plot the training and validation accuracy and loss curves for AlexNet and LeNet. Attach the plot and any observations you have below.
 
-`YOUR ANSWER HERE`
+![](images/nmep_hw1_5.1.png)
+
+We see that our base AlexNet far outperforms our (not based) LeNet.
 
 ## 5.2 For just AlexNet, vary the learning rate by factors of 3ish or 10 (ie if it's 3e-4 also try 1e-4, 1e-3, 3e-3, etc) and plot all the loss plots on the same graph. What do you observe? What is the best learning rate? Try at least 4 different learning rates.
 
-`YOUR ANSWER HERE`
+![](images/nmep_hw1_5.2.png)
+
+We see that our initial learning rate of 3e-4 performs the best, with 1e-4 slightly behind but still converging to the same loss and accuracy. The other two learning rates however flatline at a low accuracy/high loss and never really improve.
 
 ## 5.3 Do the same with batch size, keeping learning rate and everything else fixed. Ideally the batch size should be a power of 2, but try some odd batch sizes as well. What do you observe? Record training times and loss/accuracy plots for each batch size (should be easy with W&B). Try at least 4 different batch sizes.
 
-`YOUR ANSWER HERE`
+![](images/nmep_hw1_5.3.png)
+
+We notice a general trend of larger batch sizes leading to worse accuracy and loss progressions, although they eventually converge to similar values (smaller batch sizes are still better).
 
 ## 5.4 As a followup to the previous question, we're going to explore the effect of batch size on _throughput_, which is the number of images/sec that our model can process. You can find this by taking the batch size and dividing by the time per epoch. Plot the throughput for batch sizes of powers of 2, i.e. 1, 2, 4, ..., until you reach CUDA OOM. What is the largest batch size you can support? What trends do you observe, and why might this be the case?
 You only need to observe the training for ~ 5 epochs to average out the noise in training times; don't train to completion for this question! We're only asking about the time taken. If you're curious for a more in-depth explanation, feel free to read [this intro](https://horace.io/brrr_intro.html). 
 
-`YOUR ANSWER HERE`
+![](images/nmep_hw1_5.4.png)
+
+We see that as we double the batch size the throughput approximately doubles, which means that the time per epoch remains about the same (which makes sense since we are processing the same number of samples). Once we reach a batch size of $2^{15}$ our GPU runs out of memory.
 
 ## 5.5 Try different data augmentations. Take a look [here](https://pytorch.org/vision/stable/transforms.html) for torchvision augmentations. Try at least 2 new augmentation schemes. Record loss/accuracy curves and best accuracies on validation/train set.
 

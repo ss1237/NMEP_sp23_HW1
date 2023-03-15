@@ -20,12 +20,8 @@ from models import build_model
 from optimizer import build_optimizer
 from utils import create_logger, load_checkpoint, save_checkpoint
 
-import matplotlib as plt
-from data.datasets import MediumImagenetHDF5Dataset
-import random
-from torchvision.utils import save_image
-import matplotlib.pyplot as mpimg
-
+import wandb
+wandb.init(project="SP23-NMEP-HW1-CIFAR10")
 
 def parse_option():
     parser = argparse.ArgumentParser("Vision model training and evaluation script", add_help=False)
@@ -45,8 +41,6 @@ def parse_option():
     )
     parser.add_argument("--eval", action="store_true", help="Perform evaluation only")
     parser.add_argument("--throughput", action="store_true", help="Test throughput only")
-    parser.add_argument("--vis", type=int, help="number of images to visualize")
-
 
     args = parser.parse_args()
 
@@ -168,6 +162,10 @@ def train_one_epoch(config, model, criterion, data_loader, optimizer, epoch):
     )
     epoch_time = time.time() - start
     logger.info(f"EPOCH {epoch} training takes {datetime.timedelta(seconds=int(epoch_time))}")
+    
+    #wandb.log({'accuracy': acc1_meter.avg, 'loss': loss_meter.avg})
+    wandb.log({'throughput': config.DATA.BATCH_SIZE/epoch_time})
+
     return acc1_meter.avg, loss_meter.avg
 
 
@@ -240,28 +238,11 @@ if __name__ == "__main__":
         f.write(config.dump())
     logger.info(f"Full config saved to {path}")
 
+    wandb.config["learning rate"] = config.TRAIN.LR
+    wandb.config["batch size"] = config.DATA.BATCH_SIZE
+
     # print config
     logger.info(config.dump())
     logger.info(json.dumps(vars(args)))
 
-    if vars(args)["vis"]:
-        dataset_train, dataset_val, dataset_test, data_loader_train, data_loader_val, data_loader_test = build_loader(
-            config
-        )
-        
-        for i in range(vars(args)["vis"]):
-            im = MediumImagenetHDF5Dataset.__getitem__(dataset_train, random.randint(0, MediumImagenetHDF5Dataset.__len__(dataset_train)))
-            label = im[1]
-            image = im[0]
-            image.reshape(3,32,32).permute(1, 2, 0)
-            image_path = "output/resnet18/image" + str(i) + "_" + str(label.item()) + ".png"
-            # save image
-            tensor  = image.cpu()
-            save_image(tensor, image_path)
-            # show image
-            image = mpimg.imread(image_path)
-            mpimg.title = image_path
-            mpimg.imshow(image)
-            mpimg.show()
-    else:
-        main(config)
+    main(config)

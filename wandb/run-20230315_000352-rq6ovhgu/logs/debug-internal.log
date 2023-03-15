@@ -1,0 +1,874 @@
+2023-03-15 00:03:52,788 INFO    StreamThr :2191163 [internal.py:wandb_internal():87] W&B internal server running at pid: 2191163, started at: 2023-03-15 00:03:52.788004
+2023-03-15 00:03:52,791 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status
+2023-03-15 00:03:52,793 INFO    WriterThread:2191163 [datastore.py:open_for_write():85] open: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/run-rq6ovhgu.wandb
+2023-03-15 00:03:52,796 DEBUG   SenderThread:2191163 [sender.py:send():336] send: header
+2023-03-15 00:03:52,796 DEBUG   SenderThread:2191163 [sender.py:send():336] send: run
+2023-03-15 00:03:53,109 INFO    SenderThread:2191163 [dir_watcher.py:__init__():219] watching files in: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files
+2023-03-15 00:03:53,109 INFO    SenderThread:2191163 [sender.py:_start_run_threads():1078] run started: rq6ovhgu with start time 1678838632.78577
+2023-03-15 00:03:53,109 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:03:53,109 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:03:53,111 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: check_version
+2023-03-15 00:03:53,112 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: check_version
+2023-03-15 00:03:53,190 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: run_start
+2023-03-15 00:03:53,205 DEBUG   HandlerThread:2191163 [system_info.py:__init__():31] System info init
+2023-03-15 00:03:53,205 DEBUG   HandlerThread:2191163 [system_info.py:__init__():46] System info init done
+2023-03-15 00:03:53,205 INFO    HandlerThread:2191163 [system_monitor.py:start():183] Starting system monitor
+2023-03-15 00:03:53,205 INFO    SystemMonitor:2191163 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-03-15 00:03:53,205 INFO    HandlerThread:2191163 [system_monitor.py:probe():204] Collecting system info
+2023-03-15 00:03:53,206 INFO    SystemMonitor:2191163 [interfaces.py:start():187] Started cpu monitoring
+2023-03-15 00:03:53,207 INFO    SystemMonitor:2191163 [interfaces.py:start():187] Started disk monitoring
+2023-03-15 00:03:53,208 INFO    SystemMonitor:2191163 [interfaces.py:start():187] Started gpu monitoring
+2023-03-15 00:03:53,209 INFO    SystemMonitor:2191163 [interfaces.py:start():187] Started memory monitoring
+2023-03-15 00:03:53,210 INFO    SystemMonitor:2191163 [interfaces.py:start():187] Started network monitoring
+2023-03-15 00:03:53,264 DEBUG   HandlerThread:2191163 [system_info.py:probe():195] Probing system
+2023-03-15 00:03:53,266 DEBUG   HandlerThread:2191163 [system_info.py:_probe_git():180] Probing git
+2023-03-15 00:03:53,273 DEBUG   HandlerThread:2191163 [system_info.py:_probe_git():188] Probing git done
+2023-03-15 00:03:53,273 DEBUG   HandlerThread:2191163 [system_info.py:probe():240] Probing system done
+2023-03-15 00:03:53,274 DEBUG   HandlerThread:2191163 [system_monitor.py:probe():213] {'os': 'Linux-5.4.0-135-generic-x86_64-with-glibc2.31', 'python': '3.10.9', 'heartbeatAt': '2023-03-15T00:03:53.264416', 'startedAt': '2023-03-15T00:03:52.777909', 'docker': None, 'cuda': None, 'args': ('--cfg=configs/alexnet_base.yaml',), 'state': 'running', 'program': '/home/sselvan/NMEP/sp23-nmep-hw1/main.py', 'codePath': 'main.py', 'git': {'remote': 'git@github.com:ss1237/NMEP_sp23_HW1.git', 'commit': '08785de363634a88dc2dfa1ee5e4dceb9416fabb'}, 'email': 'sasedu12@gmail.com', 'root': '/home/sselvan/NMEP/sp23-nmep-hw1', 'host': 'honeydew', 'username': 'sselvan', 'executable': '/home/sselvan/miniconda3/envs/vision-zoo/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1754.96446875, 'min': 1000.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 1693.909, 'min': 1000.0, 'max': 3900.0}, {'current': 1503.036, 'min': 1000.0, 'max': 3900.0}, {'current': 2066.431, 'min': 1000.0, 'max': 3900.0}, {'current': 1296.363, 'min': 1000.0, 'max': 3900.0}, {'current': 2300.107, 'min': 1000.0, 'max': 3900.0}, {'current': 2596.715, 'min': 1000.0, 'max': 3900.0}, {'current': 2300.003, 'min': 1000.0, 'max': 3900.0}, {'current': 2355.387, 'min': 1000.0, 'max': 3900.0}, {'current': 1925.095, 'min': 1000.0, 'max': 3900.0}, {'current': 1517.506, 'min': 1000.0, 'max': 3900.0}, {'current': 1043.977, 'min': 1000.0, 'max': 3900.0}, {'current': 2292.535, 'min': 1000.0, 'max': 3900.0}, {'current': 1334.443, 'min': 1000.0, 'max': 3900.0}, {'current': 2297.54, 'min': 1000.0, 'max': 3900.0}, {'current': 1912.097, 'min': 1000.0, 'max': 3900.0}, {'current': 1628.819, 'min': 1000.0, 'max': 3900.0}, {'current': 1068.665, 'min': 1000.0, 'max': 3900.0}, {'current': 1013.915, 'min': 1000.0, 'max': 3900.0}, {'current': 3310.259, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.226, 'min': 1000.0, 'max': 3900.0}, {'current': 1559.803, 'min': 1000.0, 'max': 3900.0}, {'current': 3043.887, 'min': 1000.0, 'max': 3900.0}, {'current': 1187.247, 'min': 1000.0, 'max': 3900.0}, {'current': 1044.55, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.811, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3900.0}, {'current': 1112.382, 'min': 1000.0, 'max': 3900.0}, {'current': 3343.828, 'min': 1000.0, 'max': 3900.0}, {'current': 1281.817, 'min': 1000.0, 'max': 3900.0}, {'current': 1231.108, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.009, 'min': 1000.0, 'max': 3900.0}, {'current': 2139.826, 'min': 1000.0, 'max': 3900.0}, {'current': 1826.233, 'min': 1000.0, 'max': 3900.0}, {'current': 1460.418, 'min': 1000.0, 'max': 3900.0}, {'current': 1717.901, 'min': 1000.0, 'max': 3900.0}, {'current': 1384.429, 'min': 1000.0, 'max': 3900.0}, {'current': 2071.993, 'min': 1000.0, 'max': 3900.0}, {'current': 2567.842, 'min': 1000.0, 'max': 3900.0}, {'current': 2298.339, 'min': 1000.0, 'max': 3900.0}, {'current': 2203.199, 'min': 1000.0, 'max': 3900.0}, {'current': 1824.096, 'min': 1000.0, 'max': 3900.0}, {'current': 1504.61, 'min': 1000.0, 'max': 3900.0}, {'current': 1241.474, 'min': 1000.0, 'max': 3900.0}, {'current': 2300.0, 'min': 1000.0, 'max': 3900.0}, {'current': 1304.436, 'min': 1000.0, 'max': 3900.0}, {'current': 2300.0, 'min': 1000.0, 'max': 3900.0}, {'current': 1801.732, 'min': 1000.0, 'max': 3900.0}, {'current': 1790.489, 'min': 1000.0, 'max': 3900.0}, {'current': 1063.67, 'min': 1000.0, 'max': 3900.0}, {'current': 1073.556, 'min': 1000.0, 'max': 3900.0}, {'current': 3051.226, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.563, 'min': 1000.0, 'max': 3900.0}, {'current': 1584.725, 'min': 1000.0, 'max': 3900.0}, {'current': 3251.835, 'min': 1000.0, 'max': 3900.0}, {'current': 1187.985, 'min': 1000.0, 'max': 3900.0}, {'current': 1043.512, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.918, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.02, 'min': 1000.0, 'max': 3900.0}, {'current': 1064.738, 'min': 1000.0, 'max': 3900.0}, {'current': 2797.852, 'min': 1000.0, 'max': 3900.0}, {'current': 1259.392, 'min': 1000.0, 'max': 3900.0}, {'current': 1171.806, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.246, 'min': 1000.0, 'max': 3900.0}, {'current': 1853.909, 'min': 1000.0, 'max': 3900.0}], 'disk': {'total': 3665.0068130493164, 'used': 2659.6124954223633}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 503.54959869384766}}
+2023-03-15 00:03:53,274 INFO    HandlerThread:2191163 [system_monitor.py:probe():214] Finished collecting system info
+2023-03-15 00:03:53,274 INFO    HandlerThread:2191163 [system_monitor.py:probe():217] Publishing system info
+2023-03-15 00:03:53,274 DEBUG   HandlerThread:2191163 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-15 00:03:53,274 DEBUG   HandlerThread:2191163 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-15 00:03:53,274 DEBUG   HandlerThread:2191163 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-15 00:03:54,112 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_created():278] file/dir created: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/conda-environment.yaml
+2023-03-15 00:03:54,112 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_created():278] file/dir created: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:03:54,112 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_created():278] file/dir created: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/requirements.txt
+2023-03-15 00:03:55,284 DEBUG   HandlerThread:2191163 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-15 00:03:55,286 INFO    HandlerThread:2191163 [system_monitor.py:probe():219] Finished publishing system info
+2023-03-15 00:03:55,290 DEBUG   SenderThread:2191163 [sender.py:send():336] send: files
+2023-03-15 00:03:55,290 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-03-15 00:03:55,297 DEBUG   SenderThread:2191163 [sender.py:send():336] send: telemetry
+2023-03-15 00:03:55,303 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-15 00:03:55,304 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: stop_status
+2023-03-15 00:03:55,436 DEBUG   SenderThread:2191163 [sender.py:send():336] send: telemetry
+2023-03-15 00:03:55,436 DEBUG   SenderThread:2191163 [sender.py:send():336] send: config
+2023-03-15 00:03:55,436 DEBUG   SenderThread:2191163 [sender.py:send():336] send: config
+2023-03-15 00:03:55,906 INFO    wandb-upload_0:2191163 [upload_job.py:push():138] Uploaded file /tmp/tmp34xt2yxdwandb/v1tjbelm-wandb-metadata.json
+2023-03-15 00:03:56,110 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/conda-environment.yaml
+2023-03-15 00:03:56,110 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_created():278] file/dir created: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:03:56,110 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_created():278] file/dir created: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-metadata.json
+2023-03-15 00:03:58,111 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:03:58,644 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:00,112 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:02,113 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:03,687 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:04,114 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:06,115 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:08,116 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:08,598 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:04:08,599 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:04:08,599 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:04:08,600 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:04:09,116 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:04:09,600 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:10,117 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:10,324 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:10,459 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:12,118 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:14,874 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:15,467 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:16,120 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:18,121 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:19,945 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:20,122 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:20,298 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:04:20,299 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:04:20,299 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:04:20,300 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:04:20,472 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:21,123 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:04:22,123 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:24,124 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:25,022 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:25,482 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:26,126 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:26,127 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/config.yaml
+2023-03-15 00:04:28,127 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:28,508 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:04:28,509 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:04:28,510 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:04:28,513 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:04:29,128 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:04:30,128 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:30,505 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:31,144 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:32,129 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:34,130 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:35,509 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:36,131 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:36,168 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:36,738 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:04:36,739 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:04:36,739 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:04:36,740 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:04:37,131 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:04:38,132 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:40,133 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:40,524 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:41,188 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:42,134 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:44,135 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:45,020 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:04:45,022 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:04:45,022 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:04:45,023 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:04:45,135 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:04:45,533 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:46,136 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:46,598 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:48,136 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:50,137 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:50,535 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:51,604 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:52,138 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:53,210 DEBUG   SystemMonitor:2191163 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-03-15 00:04:53,214 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:04:53,333 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:04:53,334 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:04:53,334 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:04:53,335 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:04:54,142 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:54,143 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:04:55,546 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:55,546 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:04:56,143 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:04:57,143 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:04:58,145 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:00,146 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:00,565 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:02,147 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:02,248 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:04,148 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:05,485 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:05:05,487 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:05:05,487 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:05:05,497 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:05:05,586 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:06,149 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:06,150 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:05:07,379 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:08,150 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:10,151 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:10,620 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:12,151 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:12,426 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:14,152 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:14,352 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:05:14,353 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:05:14,354 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:05:14,354 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:05:15,153 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:05:15,626 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:16,153 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:17,667 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:18,154 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:20,156 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:20,637 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:22,157 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:22,705 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:23,129 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:05:23,138 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:05:23,139 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:05:23,139 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:05:23,157 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:05:23,217 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:05:24,158 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:25,689 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:26,159 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:27,726 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:28,159 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:30,161 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:30,694 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:31,950 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:05:31,951 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:05:31,951 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:05:31,952 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:05:32,162 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:32,163 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:05:32,953 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:34,163 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:35,738 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:36,164 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:37,965 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:38,165 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:40,166 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:40,696 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:05:40,697 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:05:40,697 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:05:40,698 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:05:40,740 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:41,166 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:05:42,166 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:43,523 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:44,167 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:45,841 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:48,169 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:48,577 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:50,170 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:50,864 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:52,171 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:52,878 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:05:52,879 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:05:52,879 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:05:52,880 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:05:53,172 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:05:53,220 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:05:54,172 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:54,222 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:05:55,914 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:05:56,173 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:58,174 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:05:59,327 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:00,175 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:00,915 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:01,540 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:06:01,542 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:06:01,542 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:06:01,542 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:06:02,176 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:02,176 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:06:04,177 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:04,412 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:05,952 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:06,178 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:08,179 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:09,444 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:10,180 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:10,376 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:06:10,383 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:06:10,384 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:06:10,384 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:06:10,983 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:11,180 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:06:12,180 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:14,181 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:14,472 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:15,997 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:16,182 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:18,183 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:19,191 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:06:19,192 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:06:19,193 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:06:19,193 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:06:20,184 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:20,184 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:06:20,194 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:21,015 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:22,185 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:23,223 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:06:24,185 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:25,252 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:26,040 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:26,186 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:28,072 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:06:28,072 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:06:28,073 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:06:28,073 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:06:28,187 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:28,187 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:06:30,188 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:30,964 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:31,291 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:32,189 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:36,071 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:36,191 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:36,314 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:38,192 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:40,193 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:40,518 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:06:40,520 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:06:40,520 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:06:40,520 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:06:41,193 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:06:41,339 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:41,521 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:42,194 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:44,195 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:46,196 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:46,363 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:46,587 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:48,197 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:49,301 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:06:49,302 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:06:49,303 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:06:49,304 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:06:50,198 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:50,198 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:06:51,427 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:52,106 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:52,198 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:53,225 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:06:54,199 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:56,200 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:56,429 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:06:57,155 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:06:57,948 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:06:57,957 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:06:57,957 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:06:57,958 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:06:58,201 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:06:58,201 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:07:00,202 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:01,485 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:02,202 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:02,235 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:04,203 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:06,205 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:06,486 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:06,854 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:07:06,855 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:07:06,855 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:07:06,856 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:07:07,205 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:07:07,856 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:08,206 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:10,207 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:11,538 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:12,208 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:12,927 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:14,208 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:15,625 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:07:15,626 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:07:15,626 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:07:15,627 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:07:16,210 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:16,210 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:07:16,551 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:18,210 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:18,410 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:20,212 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:21,680 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:22,212 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:23,227 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:07:23,413 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:24,213 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:26,214 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:26,684 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:27,794 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:07:27,796 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:07:27,796 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:07:27,797 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:07:28,215 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:28,216 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:07:28,798 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:30,216 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:31,727 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:32,217 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:33,803 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:34,218 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:36,219 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:36,521 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:07:36,522 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:07:36,523 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:07:36,523 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:07:36,742 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:37,220 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:07:38,220 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:39,164 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:40,221 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:41,774 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:42,222 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:44,183 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:44,223 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:44,972 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:07:44,973 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:07:44,974 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:07:44,974 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:07:45,223 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:07:46,224 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:46,803 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:48,225 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:49,286 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:50,226 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:51,805 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:52,227 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:53,221 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:07:53,222 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:07:53,222 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:07:53,223 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:07:53,230 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:07:53,231 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:07:54,227 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:54,820 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:07:56,228 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:56,818 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:07:58,229 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:07:59,858 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:00,231 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:01,553 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:08:01,553 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:08:01,554 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:08:01,554 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:08:01,844 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:02,232 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:02,232 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:08:04,233 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:05,212 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:06,856 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:08,235 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:10,236 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:10,312 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:11,858 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:12,237 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:13,534 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:08:13,535 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:08:13,536 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:08:13,546 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:08:14,238 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:14,238 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:08:15,388 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:16,239 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:16,883 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:18,240 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:20,241 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:20,410 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:21,887 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:22,242 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:22,423 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:08:22,424 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:08:22,425 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:08:22,447 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:08:23,234 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:08:23,243 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:08:24,243 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:25,428 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:26,244 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:26,912 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:28,245 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:30,246 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:30,474 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:30,903 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:08:30,904 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:08:30,905 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:08:30,919 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:08:31,246 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:08:31,958 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:32,247 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:34,247 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:35,528 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:36,249 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:36,966 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:38,249 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:39,706 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:08:39,707 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:08:39,708 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:08:39,734 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:08:40,250 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:40,251 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:08:40,736 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:41,992 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:42,251 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:44,252 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:45,786 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:46,254 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:46,994 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:48,129 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:08:48,130 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:08:48,131 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:08:48,131 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:08:48,255 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:48,255 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:08:50,256 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:51,783 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:52,143 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:52,257 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:53,237 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:08:54,258 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:56,258 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:08:56,819 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:08:57,171 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:08:58,259 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:00,245 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:09:00,247 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:09:00,248 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:09:00,254 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:09:00,260 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:00,260 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:09:02,134 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:02,211 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:02,261 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:04,262 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:06,263 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:07,157 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:07,238 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:08,263 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:08,957 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:09:08,957 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:09:08,958 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:09:08,958 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:09:09,264 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:09:10,264 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:12,264 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:12,265 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:12,284 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:14,266 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:16,267 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:17,271 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:17,285 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:17,447 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:09:17,449 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:09:17,449 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:09:17,450 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:09:18,272 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:18,272 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:09:20,273 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:22,274 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:22,319 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:22,350 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:23,239 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:09:24,274 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:25,905 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:09:25,906 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:09:25,906 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:09:25,907 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:09:26,276 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:26,276 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:09:27,327 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:27,526 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:28,277 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:30,277 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:32,278 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:32,343 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:32,616 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:34,279 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:34,296 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:09:34,297 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:09:34,298 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:09:34,298 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:09:35,280 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:09:36,280 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:37,553 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:38,147 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:38,281 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:40,282 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:42,283 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:42,588 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:43,147 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:44,284 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:46,286 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:46,888 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:09:46,889 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:09:46,890 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:09:46,890 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:09:47,286 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:09:47,624 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:48,287 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:48,748 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:50,288 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:52,288 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:52,644 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:53,241 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:09:53,850 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:09:54,289 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:55,546 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:09:55,547 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:09:55,547 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:09:55,548 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:09:56,290 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:56,291 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:09:57,701 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:57,731 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:09:58,291 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:09:58,959 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:00,292 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:02,293 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:02,733 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:03,927 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:10:03,929 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:10:03,929 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:10:03,930 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:10:04,294 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:04,294 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:10:04,931 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:06,295 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:07,764 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:08,296 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:10,009 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:10,297 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:12,297 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:12,597 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:10:12,598 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:10:12,598 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:10:12,599 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:10:12,783 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:13,298 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:10:14,298 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:15,424 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:16,308 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:17,802 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:18,309 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:20,310 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:20,504 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:21,213 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:10:21,214 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:10:21,215 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:10:21,215 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:10:21,310 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:10:22,311 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:22,821 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:23,244 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:10:24,312 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:26,247 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:27,863 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:28,314 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:30,315 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:31,274 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:32,316 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:32,866 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:33,504 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:10:33,505 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:10:33,505 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:10:33,506 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:10:34,317 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:34,317 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:10:36,318 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:36,367 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:37,895 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:38,319 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:40,319 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:41,390 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:42,320 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:42,326 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:10:42,327 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:10:42,328 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:10:42,328 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:10:42,905 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:43,321 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:10:44,321 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:46,322 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:46,421 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:47,925 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:48,323 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:50,324 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:51,003 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:10:51,004 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:10:51,004 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:10:51,004 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:10:51,325 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:10:52,005 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:52,325 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:52,946 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:53,247 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:10:54,326 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:56,327 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:57,072 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:10:57,950 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:10:58,328 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:10:59,658 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:10:59,660 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:10:59,660 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:10:59,661 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:00,329 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:00,329 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:02,330 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:02,549 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:02,969 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:04,331 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:06,332 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:07,644 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:07,970 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:08,332 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:08,442 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:11:08,443 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:11:08,444 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:11:08,444 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:09,333 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:10,333 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:12,334 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:13,045 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:13,058 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:14,335 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:16,336 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:18,066 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:18,097 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:18,337 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:20,338 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:20,424 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:11:20,424 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:11:20,425 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:11:20,425 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:21,338 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:22,339 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:23,131 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:23,242 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:23,249 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:11:24,340 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:26,341 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:28,133 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:28,261 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:28,342 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:28,650 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:11:28,651 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:11:28,651 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:11:28,672 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:29,342 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:30,343 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:32,344 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:33,138 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:33,365 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:34,344 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:36,346 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:36,886 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:11:36,887 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:11:36,887 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:11:36,888 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:37,347 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:38,174 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:38,347 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:38,482 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:39,348 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:40,349 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:41,349 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:43,200 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:43,350 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:43,586 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:45,353 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:45,377 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-15 00:11:45,378 DEBUG   SenderThread:2191163 [sender.py:send():336] send: history
+2023-03-15 00:11:45,379 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: summary_record
+2023-03-15 00:11:45,379 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:46,354 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:46,354 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:47,354 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:48,303 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-15 00:11:48,355 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:48,971 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:51,356 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:52,155 DEBUG   SenderThread:2191163 [sender.py:send():336] send: exit
+2023-03-15 00:11:52,155 INFO    SenderThread:2191163 [sender.py:send_exit():559] handling exit code: 0
+2023-03-15 00:11:52,155 INFO    SenderThread:2191163 [sender.py:send_exit():561] handling runtime: 478
+2023-03-15 00:11:52,155 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:52,156 INFO    SenderThread:2191163 [sender.py:send_exit():567] send defer
+2023-03-15 00:11:52,156 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:52,156 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-15 00:11:52,156 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:52,156 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-15 00:11:52,156 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 1
+2023-03-15 00:11:52,157 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:52,157 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-15 00:11:52,157 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:52,157 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-15 00:11:52,157 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 2
+2023-03-15 00:11:52,157 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:52,157 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-15 00:11:52,157 INFO    HandlerThread:2191163 [system_monitor.py:finish():193] Stopping system monitor
+2023-03-15 00:11:52,158 DEBUG   SystemMonitor:2191163 [system_monitor.py:_start():168] Finished system metrics aggregation loop
+2023-03-15 00:11:52,158 DEBUG   SystemMonitor:2191163 [system_monitor.py:_start():172] Publishing last batch of metrics
+2023-03-15 00:11:52,159 INFO    HandlerThread:2191163 [interfaces.py:finish():199] Joined cpu monitor
+2023-03-15 00:11:52,160 INFO    HandlerThread:2191163 [interfaces.py:finish():199] Joined disk monitor
+2023-03-15 00:11:52,357 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:52,358 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:53,358 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:53,377 INFO    HandlerThread:2191163 [interfaces.py:finish():199] Joined gpu monitor
+2023-03-15 00:11:53,378 INFO    HandlerThread:2191163 [interfaces.py:finish():199] Joined memory monitor
+2023-03-15 00:11:53,378 INFO    HandlerThread:2191163 [interfaces.py:finish():199] Joined network monitor
+2023-03-15 00:11:53,378 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-15 00:11:53,379 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:53,379 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-15 00:11:53,380 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 3
+2023-03-15 00:11:53,380 DEBUG   SenderThread:2191163 [sender.py:send():336] send: stats
+2023-03-15 00:11:53,380 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:53,382 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: poll_exit
+2023-03-15 00:11:53,382 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-15 00:11:53,383 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:53,383 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-15 00:11:53,383 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 4
+2023-03-15 00:11:53,383 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:53,383 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-15 00:11:53,384 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:53,384 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-15 00:11:53,384 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 5
+2023-03-15 00:11:53,384 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:53,384 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-15 00:11:53,385 DEBUG   SenderThread:2191163 [sender.py:send():336] send: summary
+2023-03-15 00:11:53,385 INFO    SenderThread:2191163 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-15 00:11:53,385 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:53,386 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-15 00:11:53,386 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 6
+2023-03-15 00:11:53,386 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:53,386 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-15 00:11:53,386 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:53,387 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-15 00:11:53,387 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 7
+2023-03-15 00:11:53,387 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: status_report
+2023-03-15 00:11:53,387 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:53,387 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-15 00:11:53,388 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:53,388 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-15 00:11:54,156 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-15 00:11:54,358 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:54,391 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 8
+2023-03-15 00:11:54,392 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: poll_exit
+2023-03-15 00:11:54,392 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:54,392 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-15 00:11:54,392 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:54,392 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-15 00:11:54,407 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 9
+2023-03-15 00:11:54,407 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:54,407 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-15 00:11:54,407 DEBUG   SenderThread:2191163 [sender.py:send():336] send: artifact
+2023-03-15 00:11:55,158 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-15 00:11:55,325 INFO    wandb-upload_0:2191163 [upload_job.py:push():93] Skipped uploading /home/sselvan/.local/share/wandb/artifacts/staging/tmpiyjvg4u0
+2023-03-15 00:11:55,359 INFO    Thread-13 :2191163 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:55,670 INFO    wandb-upload_1:2191163 [upload_job.py:push():96] Uploaded file /home/sselvan/.local/share/wandb/artifacts/staging/tmp3vj7wbcm
+2023-03-15 00:11:56,823 INFO    SenderThread:2191163 [sender.py:send_artifact():1428] sent artifact job-git_github.com_ss1237_NMEP_sp23_HW1.git_main.py - {'id': 'QXJ0aWZhY3Q6Mzk3NDU3Njc3', 'digest': '1ac9f7fb26d98fff03b4e0378c37e37e', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU3MDU0OTEz', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Mzk3NDI5OTgz', 'versionIndex': 1}}, 'version': 'latest'}
+2023-03-15 00:11:56,823 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:56,823 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-15 00:11:56,823 INFO    SenderThread:2191163 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-03-15 00:11:57,360 INFO    SenderThread:2191163 [dir_watcher.py:finish():395] scan: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files
+2023-03-15 00:11:57,361 INFO    SenderThread:2191163 [dir_watcher.py:finish():409] scan save: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/config.yaml config.yaml
+2023-03-15 00:11:57,361 INFO    SenderThread:2191163 [dir_watcher.py:finish():409] scan save: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/requirements.txt requirements.txt
+2023-03-15 00:11:57,361 INFO    SenderThread:2191163 [dir_watcher.py:finish():409] scan save: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log output.log
+2023-03-15 00:11:57,362 INFO    SenderThread:2191163 [dir_watcher.py:finish():409] scan save: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/conda-environment.yaml conda-environment.yaml
+2023-03-15 00:11:57,362 INFO    SenderThread:2191163 [dir_watcher.py:finish():409] scan save: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-metadata.json wandb-metadata.json
+2023-03-15 00:11:57,371 INFO    SenderThread:2191163 [dir_watcher.py:finish():409] scan save: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json wandb-summary.json
+2023-03-15 00:11:57,376 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 10
+2023-03-15 00:11:57,382 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: poll_exit
+2023-03-15 00:11:57,389 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:57,390 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-15 00:11:57,391 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:57,392 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-15 00:11:57,392 INFO    SenderThread:2191163 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-15 00:11:58,084 INFO    wandb-upload_4:2191163 [upload_job.py:push():138] Uploaded file /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/wandb-summary.json
+2023-03-15 00:11:58,227 INFO    wandb-upload_1:2191163 [upload_job.py:push():138] Uploaded file /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/output.log
+2023-03-15 00:11:58,249 INFO    wandb-upload_3:2191163 [upload_job.py:push():138] Uploaded file /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/conda-environment.yaml
+2023-03-15 00:11:58,296 INFO    wandb-upload_0:2191163 [upload_job.py:push():138] Uploaded file /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/config.yaml
+2023-03-15 00:11:58,299 INFO    wandb-upload_2:2191163 [upload_job.py:push():138] Uploaded file /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/files/requirements.txt
+2023-03-15 00:11:58,500 INFO    Thread-12 (_thread_body):2191163 [sender.py:transition_state():587] send defer: 11
+2023-03-15 00:11:58,500 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:58,501 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-15 00:11:58,501 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:58,501 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-15 00:11:58,502 INFO    SenderThread:2191163 [file_pusher.py:join():169] waiting for file pusher
+2023-03-15 00:11:58,502 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 12
+2023-03-15 00:11:58,502 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:58,502 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-15 00:11:58,503 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:58,503 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-15 00:11:58,929 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 13
+2023-03-15 00:11:58,930 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:58,930 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-15 00:11:58,930 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:58,930 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-15 00:11:58,931 INFO    SenderThread:2191163 [sender.py:transition_state():587] send defer: 14
+2023-03-15 00:11:58,931 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: defer
+2023-03-15 00:11:58,931 INFO    HandlerThread:2191163 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-15 00:11:58,931 DEBUG   SenderThread:2191163 [sender.py:send():336] send: final
+2023-03-15 00:11:58,931 DEBUG   SenderThread:2191163 [sender.py:send():336] send: footer
+2023-03-15 00:11:58,932 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: defer
+2023-03-15 00:11:58,932 INFO    SenderThread:2191163 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-15 00:11:58,933 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-15 00:11:58,933 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: server_info
+2023-03-15 00:11:58,933 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: poll_exit
+2023-03-15 00:11:58,933 DEBUG   SenderThread:2191163 [sender.py:send_request():363] send_request: server_info
+2023-03-15 00:11:58,937 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-15 00:11:58,937 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-15 00:11:59,050 INFO    MainThread:2191163 [wandb_run.py:_footer_history_summary_info():3429] rendering history
+2023-03-15 00:11:59,051 INFO    MainThread:2191163 [wandb_run.py:_footer_history_summary_info():3461] rendering summary
+2023-03-15 00:11:59,051 INFO    MainThread:2191163 [wandb_run.py:_footer_sync_info():3387] logging synced files
+2023-03-15 00:11:59,052 DEBUG   HandlerThread:2191163 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-15 00:11:59,052 INFO    HandlerThread:2191163 [handler.py:finish():842] shutting down handler
+2023-03-15 00:11:59,933 INFO    WriterThread:2191163 [datastore.py:close():298] close: /home/sselvan/NMEP/sp23-nmep-hw1/wandb/run-20230315_000352-rq6ovhgu/run-rq6ovhgu.wandb
+2023-03-15 00:12:00,050 INFO    SenderThread:2191163 [sender.py:finish():1504] shutting down sender
+2023-03-15 00:12:00,051 INFO    SenderThread:2191163 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-15 00:12:00,051 INFO    SenderThread:2191163 [file_pusher.py:join():169] waiting for file pusher
