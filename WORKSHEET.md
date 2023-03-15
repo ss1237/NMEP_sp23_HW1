@@ -301,7 +301,10 @@ Brain go brr no time gotta catch up to Tyler :)
 
 In `models/models.py`, we provided some skelly/guiding comments to implement ResNet. Implement it and train it on CIFAR10. Report training and validation curves, hyperparameters, best validation accuracy, and training time as compared to AlexNet. 
 
-`YOUR ANSWER HERE`
+![](images/nmep_hw1_6.0a.png)
+![](images/nmep_hw1_6.0b.png)
+
+It also took 38 minutes to train as compared to AlexNet's 8 minutes, noting that we also used twice as many epochs.
 
 ## 6.1 Visualize examples
 
@@ -331,3 +334,9 @@ We don't expect anything fancy here. Just a brief summary of what you did, what 
 **REQUIREMENT**: Everyone in your group must be able to explain what you did! Even if one person carries (I know, it happens) everyone must still be able to explain what's going on!
 
 Now go play with the models and have some competitive fun! 🎉
+
+
+
+```
+We first used the given parameters of a batch size of 32 and a learning rate of 3e-4 and got a maximum accuracy of ~73% on the validation set. Using the trends that we noticed above, we decided to lower the batch size to 16 and increase the epochs to 15 to encourage better convergence, which ended up taking ~12 hours.
+```
