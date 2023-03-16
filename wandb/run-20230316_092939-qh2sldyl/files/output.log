@@ -1,0 +1,163 @@
+=> merge config from configs/alexnet_base.yaml
+output/alexet_test/alexnet
+[32m[2023-03-16 09:29:41 root][33m(main.py 248)[39m: INFO Full config saved to output/alexet_test/alexnet/config.yaml
+[32m[2023-03-16 09:29:41 root][33m(main.py 254)[39m: INFO AUG:
+  COLOR_JITTER: 0.4
+  RAND_AUGMENT: rand-m9-mstd0.5-inc1
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 1024
+  DATASET: cifar10
+  DATA_PATH: ''
+  IMG_SIZE: 70
+  INTERPOLATION: bicubic
+  NUM_WORKERS: 32
+  PIN_MEMORY: true
+EVAL_MODE: false
+MODEL:
+  DROP_RATE: 0.0
+  NAME: alexnet
+  NUM_CLASSES: 200
+  RESNET: {}
+  RESUME: ''
+OUTPUT: output/alexet_test/alexnet
+PRINT_FREQ: 99999
+SAVE_FREQ: 5
+SEED: 0
+TEST:
+  CROP: true
+  SEQUENTIAL: false
+  SHUFFLE: false
+TRAIN:
+  ACCUMULATION_STEPS: 1
+  EPOCHS: 50
+  LR: 0.0003
+  LR_SCHEDULER:
+    NAME: cosine
+  MIN_LR: 3.0e-05
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  WARMUP_EPOCHS: 10
+  WARMUP_LR: 3.0e-05
+[32m[2023-03-16 09:29:41 root][33m(main.py 255)[39m: INFO {"cfg": "configs/alexnet_base.yaml", "opts": null, "batch_size": null, "data_path": null, "resume": null, "output": "output/alexet_test", "eval": false, "throughput": false}
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+[32m[2023-03-16 09:29:48 fvcore.nn.jit_analysis][33m(jit_analysis.py 499)[39m: WARNING Unsupported operator aten::max_pool2d encountered 3 time(s)
+[32m[2023-03-16 09:29:48 root][33m(main.py 73)[39m: INFO AlexNet(
+  #params: 57.82M, #flops: 95.59M
+  (features): Sequential(
+    #params: 2.47M, #flops: 40.24M
+    (0): Conv2d(
+      3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2)
+      #params: 23.3K, #flops: 5.95M
+    )
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(
+      64, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2)
+      #params: 0.31M, #flops: 15.05M
+    )
+    (4): ReLU()
+    (5): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(
+      192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+      #params: 0.66M, #flops: 5.97M
+    )
+    (7): ReLU()
+    (8): Conv2d(
+      384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+      #params: 0.88M, #flops: 7.96M
+    )
+    (9): ReLU()
+    (10): Conv2d(
+      256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+      #params: 0.59M, #flops: 5.31M
+    )
+    (11): ReLU()
+    (12): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (13): AdaptiveAvgPool2d(
+      output_size=(6, 6)
+      #params: 0, #flops: 0.26K
+    )
+  )
+  (classifier): Sequential(
+    #params: 55.35M, #flops: 55.35M
+    (0): Dropout(p=0.5, inplace=False)
+    (1): Linear(
+      in_features=9216, out_features=4096, bias=True
+      #params: 37.75M, #flops: 37.75M
+    )
+    (2): ReLU()
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(
+      in_features=4096, out_features=4096, bias=True
+      #params: 16.78M, #flops: 16.78M
+    )
+    (5): ReLU()
+    (6): Linear(
+      in_features=4096, out_features=200, bias=True
+      #params: 0.82M, #flops: 0.82M
+    )
+  )
+)
+[32m[2023-03-16 09:29:48 root][33m(main.py 74)[39m: INFO number of params: 57.82324 M
+[32m[2023-03-16 09:29:48 root][33m(main.py 75)[39m: INFO flops: 95.588608 MFLOPS
+[32m[2023-03-16 09:29:48 root][33m(main.py 91)[39m: INFO Start training
+
+
+
+ 59%|███████████████████████████████████████████████████████████████████▍                                              | 29/49 [00:07<00:01, 10.27it/s]
+[32m[2023-03-16 09:29:57 root][33m(main.py 162)[39m: INFO Train: [0/50]	lr 0.000300	time 0.0757 (0.1864)	loss 2.3173 (2.9822)	Acc@1 9.198 (9.658)	Mem 2207MB
+[32m[2023-03-16 09:29:57 root][33m(main.py 171)[39m: INFO EPOCH 0 training takes 0:00:09
+[32m[2023-03-16 09:29:57 root][33m(main.py 95)[39m: INFO  * Train Acc 9.658 Train Loss 2.982
+[32m[2023-03-16 09:29:57 root][33m(main.py 96)[39m: INFO Accuracy of the network on the 50000 train images: 9.7%
+[32m[2023-03-16 09:30:00 root][33m(main.py 207)[39m: INFO Validate: 	Time 0.048 (0.269)	Loss 2.3165 (2.3165)	Acc@1 8.673 (10.000)	Mem 2207MB
+[32m[2023-03-16 09:30:00 root][33m(main.py 100)[39m: INFO  * Val Acc 10.000 Val Loss 2.317
+[32m[2023-03-16 09:30:00 root][33m(main.py 101)[39m: INFO Accuracy of the network on the 10000 val images: 10.0%
+[32m[2023-03-16 09:30:00 root][33m(load_save.py 48)[39m: INFO output/alexet_test/alexnet/ckpt_best.pth saving......
+[32m[2023-03-16 09:30:02 root][33m(load_save.py 50)[39m: INFO output/alexet_test/alexnet/ckpt_best.pth saved !!!
+[32m[2023-03-16 09:30:02 root][33m(main.py 107)[39m: INFO Start testing
+  0%|                                                                                                                           | 0/10 [00:00<?, ?it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:02<00:00,  3.44it/s]
+
+
+
+ 63%|████████████████████████████████████████████████████████████████████████                                          | 31/49 [00:06<00:01, 10.95it/s]
+[32m[2023-03-16 09:30:13 root][33m(main.py 162)[39m: INFO Train: [1/50]	lr 0.000300	time 0.0739 (0.1680)	loss 2.1620 (2.2894)	Acc@1 15.330 (11.100)	Mem 2207MB
+[32m[2023-03-16 09:30:13 root][33m(main.py 171)[39m: INFO EPOCH 1 training takes 0:00:08
+[32m[2023-03-16 09:30:13 root][33m(main.py 95)[39m: INFO  * Train Acc 11.100 Train Loss 2.289
+[32m[2023-03-16 09:30:13 root][33m(main.py 96)[39m: INFO Accuracy of the network on the 50000 train images: 11.1%
+[32m[2023-03-16 09:30:16 root][33m(main.py 207)[39m: INFO Validate: 	Time 0.043 (0.294)	Loss 2.1201 (2.1280)	Acc@1 17.857 (17.430)	Mem 2207MB
+[32m[2023-03-16 09:30:16 root][33m(main.py 100)[39m: INFO  * Val Acc 17.430 Val Loss 2.128
+[32m[2023-03-16 09:30:16 root][33m(main.py 101)[39m: INFO Accuracy of the network on the 10000 val images: 17.4%
+[32m[2023-03-16 09:30:16 root][33m(main.py 112)[39m: INFO Max accuracy: 17.43%
+
+
+
+ 63%|████████████████████████████████████████████████████████████████████████                                          | 31/49 [00:07<00:01, 11.08it/s]
+[32m[2023-03-16 09:30:25 root][33m(main.py 162)[39m: INFO Train: [2/50]	lr 0.000299	time 0.0775 (0.1780)	loss 1.8509 (1.9787)	Acc@1 23.585 (20.458)	Mem 2207MB
+[32m[2023-03-16 09:30:25 root][33m(main.py 171)[39m: INFO EPOCH 2 training takes 0:00:08
+[32m[2023-03-16 09:30:25 root][33m(main.py 95)[39m: INFO  * Train Acc 20.458 Train Loss 1.979
+[32m[2023-03-16 09:30:25 root][33m(main.py 96)[39m: INFO Accuracy of the network on the 50000 train images: 20.5%
+[32m[2023-03-16 09:30:28 root][33m(main.py 207)[39m: INFO Validate: 	Time 0.049 (0.287)	Loss 1.8438 (1.8538)	Acc@1 24.362 (24.440)	Mem 2207MB
+[32m[2023-03-16 09:30:28 root][33m(main.py 100)[39m: INFO  * Val Acc 24.440 Val Loss 1.854
+[32m[2023-03-16 09:30:28 root][33m(main.py 101)[39m: INFO Accuracy of the network on the 10000 val images: 24.4%
+[32m[2023-03-16 09:30:28 root][33m(main.py 112)[39m: INFO Max accuracy: 24.44%
+  0%|                                                                                                                           | 0/49 [00:00<?, ?it/s]
+[32m[2023-03-16 09:30:39 urllib3.connectionpool][33m(connectionpool.py 1003)[39m: DEBUG Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+
+Traceback (most recent call last):
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 257, in <module>
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 94, in main
+    for epoch in range(config.TRAIN.START_EPOCH, config.TRAIN.EPOCHS):
+  File "/home/sselvan/NMEP/sp23-nmep-hw1/main.py", line 155, in train_one_epoch
+    (acc1,) = accuracy(outputs, targets)
+KeyboardInterrupt

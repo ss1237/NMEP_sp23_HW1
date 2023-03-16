@@ -11,7 +11,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from timm.utils import AverageMeter, accuracy
-from torch.optim.lr_scheduler import CosineAnnealingLR
+from torch.optim.lr_scheduler import CosineAnnealingLR, ExponentialLR
 from torch.utils.data import Dataset  # For custom datasets
 from tqdm import tqdm
 from fvcore.nn import FlopCountAnalysis, flop_count_str
@@ -34,20 +34,19 @@ def parse_option():
     parser.add_argument("--batch-size", type=int, help="batch size for single GPU")
     parser.add_argument("--data-path", type=str, help="path to dataset")
     parser.add_argument("--resume", help="resume from checkpoint")
-    parser.add_argument(
-        "--output",
-        default="output",
-        type=str,
-        metavar="PATH",
-        help="root of output folder, the full path is <output>/<model_name>/<tag> (default: output)",
-    )
+    # parser.add_argument(
+    #     "--output",
+    #     default="output",
+    #     type=str,
+    #     metavar="PATH",
+    #     help="root of output folder, the full path is <output>/<model_name>/<tag> (default: output)",
+    # )
     parser.add_argument("--eval", action="store_true", help="Perform evaluation only")
     parser.add_argument("--throughput", action="store_true", help="Test throughput only")
 
     args = parser.parse_args()
 
     config = get_config(args)
-
     return args, config
 
 
@@ -77,7 +76,8 @@ def main(config):
     # Keep it simple with basic epoch scheduler
     optimizer = build_optimizer(config, model)
     criterion = torch.nn.CrossEntropyLoss()
-    lr_scheduler = CosineAnnealingLR(optimizer, config.TRAIN.EPOCHS)
+    # lr_scheduler = CosineAnnealingLR(optimizer, config.TRAIN.EPOCHS)
+    lr_scheduler = ExponentialLR(optimizer, config.TRAIN.LR/config.TRAIN.EPOCHS)
 
     max_accuracy = 0.0
 
@@ -104,6 +104,9 @@ def main(config):
 
         if epoch % config.SAVE_FREQ == 0 or epoch == (config.TRAIN.EPOCHS - 1):
             save_checkpoint(config, epoch, model, max_accuracy, optimizer, lr_scheduler, logger)
+            logger.info("Start testing")
+            preds = evaluate(config, data_loader_test, model)
+            np.save(os.path.join(config.OUTPUT, "preds.npy"), preds)
 
         max_accuracy = max(max_accuracy, val_acc1)
         logger.info(f"Max accuracy: {max_accuracy:.2f}%\n")
@@ -121,9 +124,9 @@ def main(config):
     total_time_str = str(datetime.timedelta(seconds=int(total_time)))
     logger.info("Training time {}".format(total_time_str))
 
-    logger.info("Start testing")
-    preds = evaluate(config, data_loader_test, model)
-    np.save(os.path.join(config.OUTPUT, "preds.npy"), preds)
+    # logger.info("Start testing")
+    # preds = evaluate(config, data_loader_test, model)
+    # np.save(os.path.join(config.OUTPUT, "preds.npy"), preds)
     # TODO save predictions to csv in kaggle format
 
 
@@ -234,8 +237,10 @@ if __name__ == "__main__":
     # random.seed(seed)
 
     # Make output dir
+    print(config.OUTPUT)
     os.makedirs(config.OUTPUT, exist_ok=True)
-    logger = create_logger(output_dir=config.OUTPUT, name=f"{config.MODEL.NAME}")
+    # logger = create_logger(output_dir=config.OUTPUT, name=f"{config.MODEL.NAME}")
+    logger = create_logger(output_dir=config.OUTPUT)
 
     path = os.path.join(config.OUTPUT, "config.yaml")
     with open(path, "w") as f:

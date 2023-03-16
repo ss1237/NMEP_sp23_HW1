@@ -8,4 +8,4 @@ data = np.argmax(data, axis=1)
 
 df = pd.DataFrame(data)
 df.index += 1
-df.to_csv('submission.csv', header=['Category'], index_label='Id')
+df.to_csv('submission_resnet18.csv', header=['Category'], index_label='Id')

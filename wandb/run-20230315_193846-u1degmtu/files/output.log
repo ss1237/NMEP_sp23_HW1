@@ -1,0 +1,645 @@
+=> merge config from configs/resnet18_base.yaml
+=> merge config from configs/resnet18_medium_imagenet_2.yaml
+[32m[2023-03-15 19:38:51 resnet18][33m(main.py 243)[39m: INFO Full config saved to output/resnet18/config.yaml
+[32m[2023-03-15 19:38:51 resnet18][33m(main.py 249)[39m: INFO AUG:
+  COLOR_JITTER: 0.4
+  RAND_AUGMENT: rand-m9-mstd0.5-inc1
+BASE:
+- resnet18_base.yaml
+DATA:
+  BATCH_SIZE: 64
+  DATASET: medium_imagenet
+  DATA_PATH: ''
+  IMG_SIZE: 32
+  INTERPOLATION: bicubic
+  NUM_WORKERS: 32
+  PIN_MEMORY: true
+EVAL_MODE: false
+MODEL:
+  DROP_RATE: 0.0
+  NAME: resnet18
+  NUM_CLASSES: 200
+  RESNET: {}
+  RESUME: ''
+OUTPUT: output/resnet18
+PRINT_FREQ: 500
+SAVE_FREQ: 1
+SEED: 0
+TEST:
+  CROP: true
+  SEQUENTIAL: false
+  SHUFFLE: false
+TRAIN:
+  ACCUMULATION_STEPS: 1
+  EPOCHS: 20
+  LR: 0.0003
+  LR_SCHEDULER:
+    NAME: cosine
+  MIN_LR: 3.0e-05
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  WARMUP_EPOCHS: 2
+  WARMUP_LR: 3.0e-05
+[32m[2023-03-15 19:38:51 resnet18][33m(main.py 250)[39m: INFO {"cfg": "configs/resnet18_medium_imagenet_2.yaml", "opts": null, "batch_size": null, "data_path": null, "resume": null, "output": "output", "eval": false, "throughput": false}
+[32m[2023-03-15 19:38:59 resnet18][33m(main.py 73)[39m: INFO N/A indicates a possibly missing statistic due to how the module was called. Missing values are still included in the parent's total.
+ResNet18(
+  #params: 11.28M, #flops: 0.56G
+  (conv1): Conv2d(
+    3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+    #params: 1.73K, #flops: 1.77M
+  )
+  (bn1): BatchNorm2d(
+    64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+    #params: 0.13K, #flops: 0.33M
+  )
+  (layer1): Sequential(
+    #params: 0.15M, #flops: 0.15G
+    (0): ResNetBlock(
+      #params: 74.11K, #flops: 76.15M
+      (conv1): Conv2d(
+        64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 36.93K, #flops: 37.75M
+      )
+      (bn1): BatchNorm2d(
+        64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.13K, #flops: 0.33M
+      )
+      (conv2): Conv2d(
+        64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 36.93K, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.13K, #flops: 0.33M
+      )
+      (shortcut): Sequential(#params: 0, #flops: N/A)
+    )
+    (1): ResNetBlock(
+      #params: 74.11K, #flops: 76.15M
+      (conv1): Conv2d(
+        64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 36.93K, #flops: 37.75M
+      )
+      (bn1): BatchNorm2d(
+        64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.13K, #flops: 0.33M
+      )
+      (conv2): Conv2d(
+        64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 36.93K, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.13K, #flops: 0.33M
+      )
+      (shortcut): Sequential(#params: 0, #flops: N/A)
+    )
+  )
+  (layer2): Sequential(
+    #params: 0.53M, #flops: 0.14G
+    (0): ResNetBlock(
+      #params: 0.23M, #flops: 59.21M
+      (conv1): Conv2d(
+        64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1)
+        #params: 73.86K, #flops: 18.87M
+      )
+      (bn1): BatchNorm2d(
+        128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.26K, #flops: 0.16M
+      )
+      (conv2): Conv2d(
+        128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 0.15M, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.26K, #flops: 0.16M
+      )
+      (shortcut): Sequential(
+        #params: 8.58K, #flops: 2.26M
+        (0): Conv2d(
+          64, 128, kernel_size=(1, 1), stride=(2, 2)
+          #params: 8.32K, #flops: 2.1M
+        )
+        (1): BatchNorm2d(
+          128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          #params: 0.26K, #flops: 0.16M
+        )
+      )
+    )
+    (1): ResNetBlock(
+      #params: 0.3M, #flops: 75.83M
+      (conv1): Conv2d(
+        128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 0.15M, #flops: 37.75M
+      )
+      (bn1): BatchNorm2d(
+        128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.26K, #flops: 0.16M
+      )
+      (conv2): Conv2d(
+        128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 0.15M, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.26K, #flops: 0.16M
+      )
+      (shortcut): Sequential(#params: 0, #flops: N/A)
+    )
+  )
+  (layer3): Sequential(
+    #params: 2.1M, #flops: 0.13G
+    (0): ResNetBlock(
+      #params: 0.92M, #flops: 58.97M
+      (conv1): Conv2d(
+        128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1)
+        #params: 0.3M, #flops: 18.87M
+      )
+      (bn1): BatchNorm2d(
+        256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.51K, #flops: 81.92K
+      )
+      (conv2): Conv2d(
+        256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 0.59M, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.51K, #flops: 81.92K
+      )
+      (shortcut): Sequential(
+        #params: 33.54K, #flops: 2.18M
+        (0): Conv2d(
+          128, 256, kernel_size=(1, 1), stride=(2, 2)
+          #params: 33.02K, #flops: 2.1M
+        )
+        (1): BatchNorm2d(
+          256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          #params: 0.51K, #flops: 81.92K
+        )
+      )
+    )
+    (1): ResNetBlock(
+      #params: 1.18M, #flops: 75.66M
+      (conv1): Conv2d(
+        256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 0.59M, #flops: 37.75M
+      )
+      (bn1): BatchNorm2d(
+        256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.51K, #flops: 81.92K
+      )
+      (conv2): Conv2d(
+        256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 0.59M, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.51K, #flops: 81.92K
+      )
+      (shortcut): Sequential(#params: 0, #flops: N/A)
+    )
+  )
+  (layer4): Sequential(
+    #params: 8.4M, #flops: 0.13G
+    (0): ResNetBlock(
+      #params: 3.67M, #flops: 58.84M
+      (conv1): Conv2d(
+        256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1)
+        #params: 1.18M, #flops: 18.87M
+      )
+      (bn1): BatchNorm2d(
+        512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 1.02K, #flops: 40.96K
+      )
+      (conv2): Conv2d(
+        512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 2.36M, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 1.02K, #flops: 40.96K
+      )
+      (shortcut): Sequential(
+        #params: 0.13M, #flops: 2.14M
+        (0): Conv2d(
+          256, 512, kernel_size=(1, 1), stride=(2, 2)
+          #params: 0.13M, #flops: 2.1M
+        )
+        (1): BatchNorm2d(
+          512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          #params: 1.02K, #flops: 40.96K
+        )
+      )
+    )
+    (1): ResNetBlock(
+      #params: 4.72M, #flops: 75.58M
+      (conv1): Conv2d(
+        512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 2.36M, #flops: 37.75M
+      )
+      (bn1): BatchNorm2d(
+        512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 1.02K, #flops: 40.96K
+      )
+      (conv2): Conv2d(
+        512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+        #params: 2.36M, #flops: 37.75M
+      )
+      (bn2): BatchNorm2d(
+        512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 1.02K, #flops: 40.96K
+      )
+      (shortcut): Sequential(#params: 0, #flops: N/A)
+    )
+  )
+  (linear): Linear(
+    in_features=512, out_features=200, bias=True
+    #params: 0.1M, #flops: 0.1M
+  )
+)
+[32m[2023-03-15 19:38:59 resnet18][33m(main.py 74)[39m: INFO number of params: 11.276168 M
+[32m[2023-03-15 19:38:59 resnet18][33m(main.py 75)[39m: INFO flops: 558.592 MFLOPS
+[32m[2023-03-15 19:38:59 resnet18][33m(main.py 91)[39m: INFO Start training
+Unsupported operator aten::add_ encountered 28 time(s)
+Unsupported operator aten::avg_pool2d encountered 1 time(s)
+The following submodules of the model were never called during the trace of the graph. They may be unused, or they were accessed by direct calls to .forward() or via other python methods. In the latter case they will have zeros for statistics, though their statistics will still contribute to their parent calling module.
+layer1.0.shortcut, layer1.1.shortcut, layer2.1.shortcut, layer3.1.shortcut, layer4.1.shortcut
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

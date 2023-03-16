@@ -28,3 +28,4 @@ config: {}
 2023-03-15 16:52:31,500 INFO    MainThread:3265071 [wandb_run.py:_config_callback():1249] config_cb learning rate 0.0003 None
 2023-03-15 16:52:31,501 INFO    MainThread:3265071 [wandb_config.py:__setitem__():152] config set batch size = 16 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7f6ca3e3f700>>
 2023-03-15 16:52:31,501 INFO    MainThread:3265071 [wandb_run.py:_config_callback():1249] config_cb batch size 16 None
+2023-03-15 19:40:35,114 WARNING MsgRouterThr:3265071 [router.py:message_loop():77] message_loop has been closed

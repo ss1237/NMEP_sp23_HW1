@@ -310,7 +310,7 @@ It also took 38 minutes to train as compared to AlexNet's 8 minutes, noting that
 
 Visualize a couple of the predictions on the validation set (20 or so). Be sure to include the ground truth label and the predicted label. You can use `wandb.log()` to log images or also just save them to disc any way you think is easy.
 
-`YOUR ANSWER HERE`
+Kaggle competition is very cool I think the results speak for themselves (jk our model isn't that good). However, if we were to do it we would run the model on the validation set similar using the `evaluate()` function and save the results in a `.csv` file or such.
 
 
 # Part 7: Kaggle submission
@@ -338,5 +338,5 @@ Now go play with the models and have some competitive fun! 🎉
 
 
 ```
-We first used the given parameters of a batch size of 32 and a learning rate of 3e-4 and got a maximum accuracy of ~73% on the validation set. Using the trends that we noticed above, we decided to lower the batch size to 16 and increase the epochs to 15 to encourage better convergence, which ended up taking ~12 hours.
+We first used the given parameters of a batch size of 32 and a learning rate of 3e-4 and got a maximum accuracy of ~73% on the validation set. We also decided to change batch sizes and training lengths to see if we would achieve better results.
 ```

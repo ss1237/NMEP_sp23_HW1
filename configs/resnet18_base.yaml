@@ -9,7 +9,7 @@ MODEL:
   NUM_CLASSES: 10
   DROP_RATE: 0.0
 TRAIN:
-  EPOCHS: 100
+  EPOCHS: 50
   WARMUP_EPOCHS: 20
   LR: 3e-4
   MIN_LR: 3e-5
@@ -21,6 +21,6 @@ TRAIN:
     EPS: 1e-8
     BETAS: (0.9, 0.999)
     MOMENTUM: 0.9
-OUTPUT: "output/resnet18_cifar"
+OUTPUT: "output/resnet18_exp"
 SAVE_FREQ: 50 
 PRINT_FREQ: 500
