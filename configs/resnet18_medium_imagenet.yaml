@@ -8,8 +8,9 @@ DATA:
 MODEL:
   NUM_CLASSES: 200
 TRAIN:
-  EPOCHS: 15
+  EPOCHS: 20
   WARMUP_EPOCHS: 2
-OUTPUT: "output/resnet18_temp"
+  LR: 3e-4
+OUTPUT: "output/resnet18_bs32_autoaug"
 SAVE_FREQ: 1
 PRINT_FREQ: 500

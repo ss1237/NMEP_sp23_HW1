@@ -81,17 +81,17 @@ class MediumImagenetHDF5Dataset(Dataset):
         return len(self.file[f"images-{self.split}"])
 
     def _get_transforms(self):
-        transform = []
-        transform.append(lambda x: torch.tensor(x / 256).to(torch.float))
+        transform = [lambda x: torch.tensor(x), transforms.AutoAugment()]
+        transform.append(lambda x: (x / 256).to(torch.float))
         normalization = torch.Tensor([[0.485, 0.456, 0.406], [0.229, 0.224, 0.225]])
         transform.append(transforms.Normalize(normalization[0], normalization[1]))
         transform.append(transforms.Resize([self.input_size] * 2))
         if self.split == "train" and self.augment:
             transform.extend(
                 [
+                    transforms.RandomAutocontrast(0.3),
                     transforms.RandomHorizontalFlip(),
                     transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4),
-                    transforms.RandomAutocontrast(0.3),
                 ]
             )
         return transforms.Compose(transform)
@@ -116,9 +116,10 @@ class CIFAR10Dataset(Dataset):
     def _get_transforms(self):
         if self.train:
             transform = [
+                transforms.AutoAugment(),
+                transforms.RandomAutocontrast(0.3),
                 transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4),
                 #transforms.GaussianBlur(kernel_size=3),
-                transforms.RandomAutocontrast(0.3),
                 transforms.RandomHorizontalFlip(),
                 transforms.ToTensor(),
                 transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
