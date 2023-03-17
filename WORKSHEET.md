@@ -338,5 +338,5 @@ Now go play with the models and have some competitive fun! 🎉
 
 
 ```
-We first used the given parameters of a batch size of 32 and a learning rate of 3e-4 and got a maximum accuracy of ~73% on the validation set. We also decided to change batch sizes and training lengths to see if we would achieve better results.
+We first used the given parameters of a batch size of 32 and a learning rate of 3e-4 and got a maximum accuracy of ~73% on the validation set. We also decided to change batch sizes and training lengths to see if we would achieve better results, which it eventually did. One thing that we did note is that even though two models may have the same paramters, random weight initialization at the beginning can make a big difference on how the model progresses.
 ```
